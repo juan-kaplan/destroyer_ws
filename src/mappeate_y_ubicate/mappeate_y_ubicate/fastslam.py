@@ -14,7 +14,7 @@ from geometry_msgs.msg import Quaternion
 import math
 from visualization_msgs.msg import Marker, MarkerArray
 from custom_msgs.msg import DeltaOdom, Belief
-from ubicate_nene.robot_functions import RobotFunctions
+from ubicate_nene.robot_functions import RobotFunctions, RESOLUTION, OX, OY, HEIGHT, WIDTH
 
 def quaternion_from_yaw(yaw):
     q = Quaternion()
@@ -55,6 +55,11 @@ class FastSLAMNode(Node):
         self.particle_path_msg.header.frame_id = "map"
 
         self.robot = RobotFunctions(num_particles)
+        self.map_resolution = RESOLUTION
+        self.map_width = WIDTH
+        self.map_height = HEIGHT
+        self.map_origin_x = OX
+        self.map_origin_y = OY
 
     def delta_callback(self, msg: DeltaOdom):
         odom = {
@@ -63,15 +68,14 @@ class FastSLAMNode(Node):
             't': msg.dt
         }
         self.robot.move_particles(odom)
-        self.plot_particle()
+        self.plot_particle_and_map()
 
     def scan_callback(self, msg: LaserScan):
         msg.angle_min += np.pi
         msg.angle_max += np.pi
-        self.robot.update_particles(msg)
+        self.robot.update(msg)
 
-    def plot_particle(self):
-        samples = self.robot.get_particle_states()
+    def plot_particle_and_map(self):
         best_particle = self.robot.get_best_particle()
         selected_state = np.array([best_particle.x, best_particle.y, best_particle.orientation]) 
 
@@ -99,6 +103,35 @@ class FastSLAMNode(Node):
         self.particle_path_msg.poses.append(pose_stamped)
         self.particle_path_msg.header.stamp = self.get_clock().now().to_msg()
         self.particle_path_pub.publish(self.particle_path_msg)
+
+        #Publish map
+        msg = self.logoddsgrid_to_occupancygrid(best_particle.grid)
+        self.map_publisher.publish(msg)
+
+    def logoddsgrid_to_occupancygrid(self, logodds_grid):
+        p = 1.0 / (1.0 + np.exp(-logodds_grid))
+
+        data = (p * 100).astype(np.uint8)
+        data_flat = data.flatten(order='C').tolist()
+
+        msg = OccupancyGrid()
+        msg.header.stamp = self.get_clock().now().to_msg()
+        msg.header.frame_id = 'map'
+
+        msg.info.resolution = float(self.map_resolution)
+        msg.info.width = self.map_width
+        msg.info.height = self.map_height
+
+        msg.info.origin = Pose()
+        msg.info.origin.position.x = float(self.map_origin_x)
+        msg.info.origin.position.y = float(self.map_origin_y)
+        msg.info.origin.position.z = 0.0
+        msg.info.origin.orientation = Quaternion(x = 0.0, y = 0.0, z = 0.0, w = 1.0)
+
+        msg.data = data_flat
+
+        return msg
+
     
 def main(args=None):
     rclpy.init(args=args)

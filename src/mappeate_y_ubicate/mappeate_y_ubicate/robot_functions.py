@@ -9,6 +9,19 @@ RESOLUTION = 0.1  # 10 cm per pixel
 OX = 250
 OY = 250    
 
+# probability parameters
+P_OCC  = 0.7    # probability of occupancy when hit
+P_FREE = 0.3    # probability of occupancy for free cells (less than 0.5)
+
+# log-odds increments (l0 = 0 => p=0.5)
+L_OCC  = np.log(P_OCC / (1.0 - P_OCC))
+L_FREE = np.log(P_FREE / (1.0 - P_FREE))
+
+# optional clamping to avoid extreme values
+L_MIN  = -5.0
+L_MAX  =  5.0
+
+
 class particle():
 
     def __init__(self):
@@ -47,15 +60,52 @@ class particle():
 
         self.set(x_new, y_new, theta_new)
 
-    def set_weight(self, weight):
-        '''
-        set_weights: sets the weight of the particles
-        '''
-        #noise parameters
-        self.weight  = float(weight)
-
     def update_grid(self, scan):
-        pass
+        ranges = scan.ranges
+        range_min = scan.range_min
+        range_max = scan.range_max
+        angle_min = scan.angle_min
+        angle_max = scan.angle_max
+        angle_increment = scan.angle_increment
+
+        H, W = self.grid.shape
+        robot_i, robot_j = self.coordinate_to_grid(self.x, self.y, OX, OY, RESOLUTION)
+        if not (0 <= robot_i < H and 0 <= robot_j < W):
+            # robot outside map → nothing to update
+            return
+
+        num_beams = len(ranges)
+        beam_step = 1
+
+        for k in range(0, num_beams, beam_step):
+            r = ranges[k]
+
+            if not np.isfinite(r):
+                continue
+
+            if r < range_min or r > range_max:
+                continue
+
+            angle = angle_min + k * angle_increment
+            global_angle = self.orientation + angle
+
+            ex = self.x + r * np.cos(global_angle)
+            ey = self.y + r * np.sin(global_angle)
+
+            end_i, end_j = self.coordinate_to_grid(ex, ey, OX, OY, RESOLUTION)
+
+            if not (0 <= end_i < H and 0 <= end_j < W):
+                continue
+
+            cells = self._bresenham(robot_i, robot_j, end_i, end_j)
+
+            for i, j in cells:
+                if i == end_i and j == end_j:
+                    self.grid[i, j] += L_OCC
+                else:
+                    self.grid[i, j] += L_FREE
+            
+            self.grid = np.clip(self.grid, L_MIN, L_MAX)
 
     def update_weight(self, scan):
         ranges = scan.ranges
@@ -90,6 +140,37 @@ class particle():
         j = ((x - ox) / res).astype(int)
         i = ((y - oy) / res).astype(int)
         return i, j
+
+    def _bresenham(self, i0, j0, i1, j1):
+        """
+        Bresenham's line algorithm from (i0, j0) to (i1, j1).
+        Returns list of (i, j) including both endpoints.
+        Indices are ints: i = row (y), j = col (x).
+        """
+        cells = []
+
+        di = abs(i1 - i0)
+        dj = abs(j1 - j0)
+        si = 1 if i0 < i1 else -1
+        sj = 1 if j0 < j1 else -1
+
+        err = di - dj
+        i, j = i0, j0
+
+        while True:
+            cells.append((i, j))
+            if i == i1 and j == j1:
+                break
+            e2 = 2 * err
+            if e2 > -dj:
+                err -= dj
+                i += si
+            if e2 < di:
+                err += di
+                j += sj
+
+        return cells
+
             
 
 class RobotFunctions:
@@ -117,6 +198,11 @@ class RobotFunctions:
     def get_best_particle(self,):
         return max(self.particles, key=lambda p: p.log_weight)
 
+    def update(self, scan):
+        N_eff = self.update_particles(scan)
+        for p in self.particles:
+            p.update_grid(scan)
+
     def update_particles(self, scan):
         for part in self.particles:
             part.update_weight(scan)
@@ -130,9 +216,6 @@ class RobotFunctions:
             # log_ws can contain -inf for some particles; logsumexp handles that.
             log_ws -= logsumexp(log_ws)      # now log(sum(exp(log_ws))) = 0
             self.weights = np.exp(log_ws)    # sum_i weights[i] = 1
-
-        for w, p in zip(self.weights, self.particles):
-            p.set_weight(w)
 
         N_eff = 1.0 / np.sum(self.weights ** 2)
         N_threshold = self.resample_ratio * self.num_particles
