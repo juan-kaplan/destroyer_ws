@@ -9,9 +9,13 @@ setup.py
 ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/requires.txt
 ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/top_level.txt
 ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/zip-safe
+launch/launch_my_fastslam.launch.py
 mappeate_y_ubicate/__init__.py
-mappeate_y_ubicate/my_fastslam.py
+mappeate_y_ubicate/delta_odom.py
+mappeate_y_ubicate/fastslam.py
+mappeate_y_ubicate/robot_functions.py
 resource/mappeate_y_ubicate
+rviz/slam.rviz
 test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py

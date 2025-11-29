@@ -1,9 +1,15 @@
-/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate/my_fastslam.py
+/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate/fastslam.py
 /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate/__init__.py
-/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate/__pycache__/my_fastslam.cpython-310.pyc
+/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate/delta_odom.py
+/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate/robot_functions.py
+/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate/__pycache__/fastslam.cpython-310.pyc
 /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate/__pycache__/__init__.cpython-310.pyc
+/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate/__pycache__/delta_odom.cpython-310.pyc
+/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate/__pycache__/robot_functions.cpython-310.pyc
 /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/share/ament_index/resource_index/packages/mappeate_y_ubicate
 /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/package.xml
+/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/launch/launch_my_fastslam.launch.py
+/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/rviz/slam.rviz
 /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate-0.0.0-py3.10.egg-info/zip-safe
 /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate-0.0.0-py3.10.egg-info/requires.txt
 /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate-0.0.0-py3.10.egg-info/PKG-INFO
@@ -11,3 +17,5 @@
 /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate-0.0.0-py3.10.egg-info/entry_points.txt
 /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate-0.0.0-py3.10.egg-info/top_level.txt
 /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate-0.0.0-py3.10.egg-info/SOURCES.txt
+/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/mappeate_y_ubicate/delta_odom
+/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/mappeate_y_ubicate/fastslam

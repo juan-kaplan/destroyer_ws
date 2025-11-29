@@ -1,3 +1,4 @@
 [console_scripts]
-
+delta_odom = mappeate_y_ubicate.delta_odom:main
+fastslam = mappeate_y_ubicate.fastslam:main
 
