@@ -1,0 +1,272 @@
+[0.448s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.449s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7875894881f0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x78758944fd00>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x78758944fd00>>, mixin_verb=('build',))
+[0.982s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.983s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.983s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.983s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.983s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.983s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.983s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/juan/Documents/fundamentos_robotica/destroyer_ws'
+[0.983s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.984s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.984s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.984s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.984s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.984s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.984s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.984s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.984s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.015s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.015s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.015s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.015s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.015s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.015s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.016s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.016s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.016s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.016s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.016s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.017s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.017s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.017s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.017s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.018s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.018s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.018s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.018s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.018s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.018s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.018s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.019s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.019s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.019s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.019s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.019s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.019s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.020s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msgs) by extensions ['ignore', 'ignore_ament_install']
+[1.020s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msgs) by extension 'ignore'
+[1.020s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msgs) by extension 'ignore_ament_install'
+[1.020s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msgs) by extensions ['colcon_pkg']
+[1.020s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msgs) by extension 'colcon_pkg'
+[1.020s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msgs) by extensions ['colcon_meta']
+[1.021s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msgs) by extension 'colcon_meta'
+[1.021s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msgs) by extensions ['ros']
+[1.021s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msgs) by extension 'ros'
+[1.029s] DEBUG:colcon.colcon_core.package_identification:Package 'src/custom_msgs' with type 'ros.ament_cmake' and name 'custom_msgs'
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify(src/mappeate_y_ubicate) by extensions ['ignore', 'ignore_ament_install']
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify(src/mappeate_y_ubicate) by extension 'ignore'
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify(src/mappeate_y_ubicate) by extension 'ignore_ament_install'
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify(src/mappeate_y_ubicate) by extensions ['colcon_pkg']
+[1.032s] Level 1:colcon.colcon_core.package_identification:_identify(src/mappeate_y_ubicate) by extension 'colcon_pkg'
+[1.032s] Level 1:colcon.colcon_core.package_identification:_identify(src/mappeate_y_ubicate) by extensions ['colcon_meta']
+[1.032s] Level 1:colcon.colcon_core.package_identification:_identify(src/mappeate_y_ubicate) by extension 'colcon_meta'
+[1.032s] Level 1:colcon.colcon_core.package_identification:_identify(src/mappeate_y_ubicate) by extensions ['ros']
+[1.032s] Level 1:colcon.colcon_core.package_identification:_identify(src/mappeate_y_ubicate) by extension 'ros'
+[1.038s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mappeate_y_ubicate' with type 'ros.ament_python' and name 'mappeate_y_ubicate'
+[1.039s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_custom_simulation) by extensions ['ignore', 'ignore_ament_install']
+[1.039s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_custom_simulation) by extension 'ignore'
+[1.039s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_custom_simulation) by extension 'ignore_ament_install'
+[1.039s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_custom_simulation) by extensions ['colcon_pkg']
+[1.039s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_custom_simulation) by extension 'colcon_pkg'
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_custom_simulation) by extensions ['colcon_meta']
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_custom_simulation) by extension 'colcon_meta'
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_custom_simulation) by extensions ['ros']
+[1.040s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_custom_simulation) by extension 'ros'
+[1.043s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtlebot3_custom_simulation' with type 'ros.ament_cmake' and name 'turtlebot3_custom_simulation'
+[1.043s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.043s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.043s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.043s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.043s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.128s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.128s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.136s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/juan/Documents/fundamentos_robotica/ws/install
+[1.142s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 437 installed packages in /opt/ros/humble
+[1.147s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.285s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'custom_msgs' is in: /home/juan/Documents/fundamentos_robotica/ws/install/custom_msgs
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding custom_msgs
+
+This may be promoted to an error in a future release of colcon-override-check.
+[1.288s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'cmake_args' from command line to 'None'
+[1.288s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'cmake_target' from command line to 'None'
+[1.288s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.288s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[1.288s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[1.288s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[1.288s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[1.288s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[1.288s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.288s] DEBUG:colcon.colcon_core.verb:Building package 'custom_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/juan/Documents/fundamentos_robotica/destroyer_ws/build/custom_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs', 'merge_install': False, 'path': '/home/juan/Documents/fundamentos_robotica/destroyer_ws/src/custom_msgs', 'symlink_install': False, 'test_result_base': None}
+[1.289s] Level 5:colcon.colcon_core.verb:set package 'mappeate_y_ubicate' build argument 'cmake_args' from command line to 'None'
+[1.289s] Level 5:colcon.colcon_core.verb:set package 'mappeate_y_ubicate' build argument 'cmake_target' from command line to 'None'
+[1.289s] Level 5:colcon.colcon_core.verb:set package 'mappeate_y_ubicate' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.289s] Level 5:colcon.colcon_core.verb:set package 'mappeate_y_ubicate' build argument 'cmake_clean_cache' from command line to 'False'
+[1.289s] Level 5:colcon.colcon_core.verb:set package 'mappeate_y_ubicate' build argument 'cmake_clean_first' from command line to 'False'
+[1.289s] Level 5:colcon.colcon_core.verb:set package 'mappeate_y_ubicate' build argument 'cmake_force_configure' from command line to 'False'
+[1.289s] Level 5:colcon.colcon_core.verb:set package 'mappeate_y_ubicate' build argument 'ament_cmake_args' from command line to 'None'
+[1.290s] Level 5:colcon.colcon_core.verb:set package 'mappeate_y_ubicate' build argument 'catkin_cmake_args' from command line to 'None'
+[1.290s] Level 5:colcon.colcon_core.verb:set package 'mappeate_y_ubicate' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.290s] DEBUG:colcon.colcon_core.verb:Building package 'mappeate_y_ubicate' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate', 'merge_install': False, 'path': '/home/juan/Documents/fundamentos_robotica/destroyer_ws/src/mappeate_y_ubicate', 'symlink_install': False, 'test_result_base': None}
+[1.290s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_custom_simulation' build argument 'cmake_args' from command line to 'None'
+[1.290s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_custom_simulation' build argument 'cmake_target' from command line to 'None'
+[1.291s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_custom_simulation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.291s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_custom_simulation' build argument 'cmake_clean_cache' from command line to 'False'
+[1.291s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_custom_simulation' build argument 'cmake_clean_first' from command line to 'False'
+[1.291s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_custom_simulation' build argument 'cmake_force_configure' from command line to 'False'
+[1.291s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_custom_simulation' build argument 'ament_cmake_args' from command line to 'None'
+[1.291s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_custom_simulation' build argument 'catkin_cmake_args' from command line to 'None'
+[1.291s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_custom_simulation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.291s] DEBUG:colcon.colcon_core.verb:Building package 'turtlebot3_custom_simulation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/juan/Documents/fundamentos_robotica/destroyer_ws/build/turtlebot3_custom_simulation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation', 'merge_install': False, 'path': '/home/juan/Documents/fundamentos_robotica/destroyer_ws/src/turtlebot3_custom_simulation', 'symlink_install': False, 'test_result_base': None}
+[1.292s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.294s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.294s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/src/custom_msgs' with build type 'ament_cmake'
+[1.294s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/src/custom_msgs'
+[1.304s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.304s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.304s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.317s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/src/mappeate_y_ubicate' with build type 'ament_python'
+[1.317s] Level 1:colcon.colcon_core.shell:create_environment_hook('mappeate_y_ubicate', 'ament_prefix_path')
+[1.318s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/hook/ament_prefix_path.ps1'
+[1.321s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/hook/ament_prefix_path.dsv'
+[1.322s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/hook/ament_prefix_path.sh'
+[1.324s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.324s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.336s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/src/turtlebot3_custom_simulation' with build type 'ament_cmake'
+[1.336s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/src/turtlebot3_custom_simulation'
+[1.337s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.337s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.358s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/build/custom_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juan/Documents/fundamentos_robotica/ws/install/ubicate_nene:/home/juan/Documents/fundamentos_robotica/ws/install/paquete1:/home/juan/Documents/fundamentos_robotica/ws/install/no_te_choques:/home/juan/Documents/fundamentos_robotica/ws/install/custom_code:/opt/ros/humble /usr/bin/cmake --build /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/custom_msgs -- -j12 -l12
+[2.104s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/src/mappeate_y_ubicate'
+[2.104s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.104s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.129s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/build/turtlebot3_custom_simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juan/Documents/fundamentos_robotica/ws/install/ubicate_nene:/home/juan/Documents/fundamentos_robotica/ws/install/paquete1:/home/juan/Documents/fundamentos_robotica/ws/install/no_te_choques:/home/juan/Documents/fundamentos_robotica/ws/install/custom_code:/opt/ros/humble /usr/bin/cmake --build /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/turtlebot3_custom_simulation -- -j12 -l12
+[2.389s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/build/turtlebot3_custom_simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juan/Documents/fundamentos_robotica/ws/install/ubicate_nene:/home/juan/Documents/fundamentos_robotica/ws/install/paquete1:/home/juan/Documents/fundamentos_robotica/ws/install/no_te_choques:/home/juan/Documents/fundamentos_robotica/ws/install/custom_code:/opt/ros/humble /usr/bin/cmake --build /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/turtlebot3_custom_simulation -- -j12 -l12
+[2.421s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/build/turtlebot3_custom_simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juan/Documents/fundamentos_robotica/ws/install/ubicate_nene:/home/juan/Documents/fundamentos_robotica/ws/install/paquete1:/home/juan/Documents/fundamentos_robotica/ws/install/no_te_choques:/home/juan/Documents/fundamentos_robotica/ws/install/custom_code:/opt/ros/humble /usr/bin/cmake --install /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/turtlebot3_custom_simulation
+[2.444s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/build/custom_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juan/Documents/fundamentos_robotica/ws/install/ubicate_nene:/home/juan/Documents/fundamentos_robotica/ws/install/paquete1:/home/juan/Documents/fundamentos_robotica/ws/install/no_te_choques:/home/juan/Documents/fundamentos_robotica/ws/install/custom_code:/opt/ros/humble /usr/bin/cmake --build /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/custom_msgs -- -j12 -l12
+[2.448s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/build/custom_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juan/Documents/fundamentos_robotica/ws/install/ubicate_nene:/home/juan/Documents/fundamentos_robotica/ws/install/paquete1:/home/juan/Documents/fundamentos_robotica/ws/install/no_te_choques:/home/juan/Documents/fundamentos_robotica/ws/install/custom_code:/opt/ros/humble /usr/bin/cmake --install /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/custom_msgs
+[2.467s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot3_custom_simulation)
+[2.469s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/build/turtlebot3_custom_simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juan/Documents/fundamentos_robotica/ws/install/ubicate_nene:/home/juan/Documents/fundamentos_robotica/ws/install/paquete1:/home/juan/Documents/fundamentos_robotica/ws/install/no_te_choques:/home/juan/Documents/fundamentos_robotica/ws/install/custom_code:/opt/ros/humble /usr/bin/cmake --install /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/turtlebot3_custom_simulation
+[2.492s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation' for CMake module files
+[2.502s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation' for CMake config files
+[2.503s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_custom_simulation', 'cmake_prefix_path')
+[2.504s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/hook/cmake_prefix_path.ps1'
+[2.506s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/hook/cmake_prefix_path.dsv'
+[2.506s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/hook/cmake_prefix_path.sh'
+[2.508s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/lib'
+[2.508s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/bin'
+[2.508s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/lib/pkgconfig/turtlebot3_custom_simulation.pc'
+[2.509s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/lib/python3.10/site-packages'
+[2.510s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/bin'
+[2.510s] INFO:colcon.colcon_core.shell:Creating package script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.ps1'
+[2.512s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.dsv'
+[2.514s] INFO:colcon.colcon_core.shell:Creating package script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.sh'
+[2.516s] INFO:colcon.colcon_core.shell:Creating package script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.bash'
+[2.518s] INFO:colcon.colcon_core.shell:Creating package script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.zsh'
+[2.520s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/colcon-core/packages/turtlebot3_custom_simulation)
+[2.521s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot3_custom_simulation)
+[2.522s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation' for CMake module files
+[2.523s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation' for CMake config files
+[2.524s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_custom_simulation', 'cmake_prefix_path')
+[2.525s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/hook/cmake_prefix_path.ps1'
+[2.526s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/hook/cmake_prefix_path.dsv'
+[2.527s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/hook/cmake_prefix_path.sh'
+[2.528s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/lib'
+[2.528s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/bin'
+[2.528s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/lib/pkgconfig/turtlebot3_custom_simulation.pc'
+[2.529s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/lib/python3.10/site-packages'
+[2.530s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/bin'
+[2.531s] INFO:colcon.colcon_core.shell:Creating package script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.ps1'
+[2.532s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.dsv'
+[2.533s] INFO:colcon.colcon_core.shell:Creating package script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.sh'
+[2.534s] INFO:colcon.colcon_core.shell:Creating package script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.bash'
+[2.536s] INFO:colcon.colcon_core.shell:Creating package script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.zsh'
+[2.537s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/colcon-core/packages/turtlebot3_custom_simulation)
+[2.628s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_msgs)
+[2.629s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs' for CMake module files
+[2.630s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/build/custom_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juan/Documents/fundamentos_robotica/ws/install/ubicate_nene:/home/juan/Documents/fundamentos_robotica/ws/install/paquete1:/home/juan/Documents/fundamentos_robotica/ws/install/no_te_choques:/home/juan/Documents/fundamentos_robotica/ws/install/custom_code:/opt/ros/humble /usr/bin/cmake --install /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/custom_msgs
+[2.632s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs' for CMake config files
+[2.635s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_msgs', 'cmake_prefix_path')
+[2.635s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/cmake_prefix_path.ps1'
+[2.637s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/cmake_prefix_path.dsv'
+[2.639s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/cmake_prefix_path.sh'
+[2.641s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/lib'
+[2.641s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_msgs', 'ld_library_path_lib')
+[2.642s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/ld_library_path_lib.ps1'
+[2.643s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/ld_library_path_lib.dsv'
+[2.644s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/ld_library_path_lib.sh'
+[2.646s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/bin'
+[2.646s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/lib/pkgconfig/custom_msgs.pc'
+[2.647s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/lib/python3.10/site-packages'
+[2.648s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/bin'
+[2.649s] INFO:colcon.colcon_core.shell:Creating package script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/custom_msgs/package.ps1'
+[2.650s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/custom_msgs/package.dsv'
+[2.651s] INFO:colcon.colcon_core.shell:Creating package script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/custom_msgs/package.sh'
+[2.652s] INFO:colcon.colcon_core.shell:Creating package script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/custom_msgs/package.bash'
+[2.653s] INFO:colcon.colcon_core.shell:Creating package script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/custom_msgs/package.zsh'
+[2.654s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/colcon-core/packages/custom_msgs)
+[2.655s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_msgs)
+[2.655s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs' for CMake module files
+[2.657s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs' for CMake config files
+[2.658s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_msgs', 'cmake_prefix_path')
+[2.658s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/cmake_prefix_path.ps1'
+[2.659s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/cmake_prefix_path.dsv'
+[2.660s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/cmake_prefix_path.sh'
+[2.661s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/lib'
+[2.662s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_msgs', 'ld_library_path_lib')
+[2.662s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/ld_library_path_lib.ps1'
+[2.663s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/ld_library_path_lib.dsv'
+[2.664s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/ld_library_path_lib.sh'
+[2.665s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/bin'
+[2.665s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/lib/pkgconfig/custom_msgs.pc'
+[2.665s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/lib/python3.10/site-packages'
+[2.666s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/bin'
+[2.667s] INFO:colcon.colcon_core.shell:Creating package script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/custom_msgs/package.ps1'
+[2.668s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/custom_msgs/package.dsv'
+[2.669s] INFO:colcon.colcon_core.shell:Creating package script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/custom_msgs/package.sh'
+[2.670s] INFO:colcon.colcon_core.shell:Creating package script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/custom_msgs/package.bash'
+[2.671s] INFO:colcon.colcon_core.shell:Creating package script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/custom_msgs/package.zsh'
+[2.672s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/custom_msgs/share/colcon-core/packages/custom_msgs)
+[3.269s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/src/mappeate_y_ubicate': PYTHONPATH=/home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mappeate_y_ubicate build --build-base /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/build install --record /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/install.log --single-version-externally-managed install_data
+[4.078s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate' for CMake module files
+[4.079s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/src/mappeate_y_ubicate' returned '0': PYTHONPATH=/home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mappeate_y_ubicate build --build-base /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/build install --record /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/install.log --single-version-externally-managed install_data
+[4.081s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate' for CMake config files
+[4.083s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib'
+[4.083s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/bin'
+[4.084s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/pkgconfig/mappeate_y_ubicate.pc'
+[4.084s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages'
+[4.084s] Level 1:colcon.colcon_core.shell:create_environment_hook('mappeate_y_ubicate', 'pythonpath')
+[4.085s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/hook/pythonpath.ps1'
+[4.086s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/hook/pythonpath.dsv'
+[4.087s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/hook/pythonpath.sh'
+[4.088s] Level 1:colcon.colcon_core.environment:checking '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/bin'
+[4.088s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mappeate_y_ubicate)
+[4.089s] INFO:colcon.colcon_core.shell:Creating package script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/package.ps1'
+[4.090s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/package.dsv'
+[4.091s] INFO:colcon.colcon_core.shell:Creating package script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/package.sh'
+[4.092s] INFO:colcon.colcon_core.shell:Creating package script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/package.bash'
+[4.093s] INFO:colcon.colcon_core.shell:Creating package script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/package.zsh'
+[4.093s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/share/colcon-core/packages/mappeate_y_ubicate)
+[4.094s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[4.095s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[4.095s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[4.095s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[4.111s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[4.112s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[4.112s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[4.162s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[4.163s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/local_setup.ps1'
+[4.166s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/_local_setup_util_ps1.py'
+[4.169s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/setup.ps1'
+[4.172s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/local_setup.sh'
+[4.174s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/_local_setup_util_sh.py'
+[4.176s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/setup.sh'
+[4.179s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/local_setup.bash'
+[4.181s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/setup.bash'
+[4.184s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/local_setup.zsh'
+[4.186s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/setup.zsh'

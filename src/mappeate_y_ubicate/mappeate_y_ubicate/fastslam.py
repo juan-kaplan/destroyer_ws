@@ -73,12 +73,14 @@ class FastSLAMNode(Node):
             'r2': msg.dr2,
             't': msg.dt
         }
-        self.robot.move_particles(odom)
+        self.robot.move_particles(odom)\
+
+        if not (odom['r1'] == 0 and odom['r2'] == 0 and odom['t'] == 0):
+            print(f"r1: {odom['r1']}, r2: {odom['r2']}, t: {odom['t']}")
+        
         self.plot_particle_and_map()
 
     def scan_callback(self, msg: LaserScan):
-        msg.angle_min += np.pi
-        msg.angle_max += np.pi
         self.robot.update(msg)
 
     def plot_particle_and_map(self):

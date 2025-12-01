@@ -12,8 +12,6 @@ from geometry_msgs.msg import PoseArray
 from geometry_msgs.msg import PoseStamped
 from geometry_msgs.msg import Quaternion
 from geometry_msgs.msg import Pose
-from geometry_msgs.msg import TransformStamped
-from tf2_ros import TransformBroadcaster
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
 
 import math
@@ -45,10 +43,6 @@ class FastSLAMNode(Node):
             LaserScan, "/scan", self.scan_callback, 10
         )
 
-        self.odom_sub = self.create_subscription(
-            Odometry, "/calc_odom", self.odom_callback, 10
-        )
-
         map_qos = QoSProfile(
             history=HistoryPolicy.KEEP_LAST,
             depth=1,
@@ -73,34 +67,20 @@ class FastSLAMNode(Node):
         self.map_origin_x = OX
         self.map_origin_y = OY
 
-        self.tf_broadcaster = TransformBroadcaster(self)
-        self.last_odom_pose = None
-
     def delta_callback(self, msg: DeltaOdom):
         odom = {
             'r1': msg.dr1,
             'r2': msg.dr2,
             't': msg.dt
         }
-        self.robot.move_particles(odom)
+        self.robot.move_particles(odom)\
+
+        if not (odom['r1'] == 0 and odom['r2'] == 0 and odom['t'] == 0):
+            print(f"r1: {odom['r1']}, r2: {odom['r2']}, t: {odom['t']}")
+        
         self.plot_particle_and_map()
 
-    def odom_callback(self, msg: Odometry):
-        x = msg.pose.pose.position.x
-        y = msg.pose.pose.position.y
-
-        q = msg.pose.pose.orientation
-        # scipy Rotation expects [x, y, z, w]
-        r = R.from_quat([q.x, q.y, q.z, q.w])
-        # yaw around z
-        yaw = r.as_euler('xyz')[2]
-
-        # Store pose in odom frame
-        self.last_odom_pose = (x, y, yaw)
-
     def scan_callback(self, msg: LaserScan):
-        msg.angle_min += np.pi
-        msg.angle_max += np.pi
         self.robot.update(msg)
 
     def plot_particle_and_map(self):
@@ -114,8 +94,6 @@ class FastSLAMNode(Node):
         cos_t = np.cos(selected_state[2])
         sin_t = np.sin(selected_state[2])
         mean_theta = np.arctan2(sin_t, cos_t)
-
-        self._broadcast_map_to_odom((mean_x, mean_y, mean_theta))
 
         # Build PoseStamped for the mean particle
         pose_stamped = PoseStamped()
@@ -162,44 +140,7 @@ class FastSLAMNode(Node):
 
         return msg
 
-    def _broadcast_map_to_odom(self, map_pose):
-        """
-        map_pose: (x_m, y_m, theta_m) robot pose in map frame.
-        last_odom_pose: (x_o, y_o, theta_o) robot pose in odom frame.
-        Publishes TF: map -> odom.
-        """
-        if self.last_odom_pose is None:
-            # We don't know odom pose yet, nothing to broadcast
-            return
-
-        x_m, y_m, theta_m = map_pose
-        x_o, y_o, theta_o = self.last_odom_pose
-
-        # Rotation of map->odom
-        theta_mo = theta_m - theta_o
-        cos_mo = np.cos(theta_mo)
-        sin_mo = np.sin(theta_mo)
-
-        # Translation of map->odom:
-        # p_mo = p_mr - R_mo * p_or
-        tx = x_m - (cos_mo * x_o - sin_mo * y_o)
-        ty = y_m - (sin_mo * x_o + cos_mo * y_o)
-
-        t = TransformStamped()
-        t.header.stamp = self.get_clock().now().to_msg()
-        t.header.frame_id = "map"
-        t.child_frame_id = "odom"
-
-        t.transform.translation.x = float(tx)
-        t.transform.translation.y = float(ty)
-        t.transform.translation.z = 0.0
-
-        q = yaw_to_quaternion(theta_mo)
-        t.transform.rotation = q
-
-        self.tf_broadcaster.sendTransform(t)
-
-
+    
 def main(args=None):
     rclpy.init(args=args)
     node = FastSLAMNode()

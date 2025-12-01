@@ -20,7 +20,7 @@ def generate_launch_description():
     # Declare launch argument for num_particles
     num_particles_arg = DeclareLaunchArgument(
         "num_particles",
-        default_value="50",
+        default_value="10",
         description="Number of particles for the filter"
     )
 

@@ -1,0 +1,65 @@
+[0.791s] Invoking command in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/build/turtlebot3_custom_simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juan/Documents/fundamentos_robotica/ws/install/ubicate_nene:/home/juan/Documents/fundamentos_robotica/ws/install/paquete1:/home/juan/Documents/fundamentos_robotica/ws/install/no_te_choques:/home/juan/Documents/fundamentos_robotica/ws/install/custom_code:/opt/ros/humble /usr/bin/cmake --build /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/turtlebot3_custom_simulation -- -j12 -l12
+[1.015s] [100%] Built target turtlebot3_custom_simulation
+[1.051s] Invoked command in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/build/turtlebot3_custom_simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juan/Documents/fundamentos_robotica/ws/install/ubicate_nene:/home/juan/Documents/fundamentos_robotica/ws/install/paquete1:/home/juan/Documents/fundamentos_robotica/ws/install/no_te_choques:/home/juan/Documents/fundamentos_robotica/ws/install/custom_code:/opt/ros/humble /usr/bin/cmake --build /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/turtlebot3_custom_simulation -- -j12 -l12
+[1.083s] Invoking command in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/build/turtlebot3_custom_simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juan/Documents/fundamentos_robotica/ws/install/ubicate_nene:/home/juan/Documents/fundamentos_robotica/ws/install/paquete1:/home/juan/Documents/fundamentos_robotica/ws/install/no_te_choques:/home/juan/Documents/fundamentos_robotica/ws/install/custom_code:/opt/ros/humble /usr/bin/cmake --install /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/turtlebot3_custom_simulation
+[1.107s] -- Install configuration: ""
+[1.113s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/lib/turtlebot3_custom_simulation/turtlebot3_custom_simulation
+[1.114s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/launch
+[1.114s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/launch/custom_room.launch.py
+[1.114s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/launch/custom_casa_obs.launch.py
+[1.114s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/launch/custom_maze.launch.py
+[1.115s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/launch/custom_casa.launch.py
+[1.115s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/launch/custom_simulation.launch.py
+[1.115s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/launch/custom_casa_obs2.launch.py
+[1.115s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/param
+[1.115s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/param/burger.yaml
+[1.115s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds
+[1.115s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/casa_obs2.world
+[1.116s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Armchair
+[1.116s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Armchair/model.sdf
+[1.116s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Armchair/model.config
+[1.116s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Walls
+[1.116s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Walls/model.sdf
+[1.116s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Walls/model.config
+[1.116s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/slippery.world
+[1.117s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/map
+[1.117s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/map/map.pgm
+[1.117s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/map/map.yaml
+[1.117s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/HospitalBot
+[1.118s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/HospitalBot/model.sdf
+[1.118s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/HospitalBot/model.config
+[1.118s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/casa_o.world
+[1.118s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Suitcase2H
+[1.118s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Suitcase2H/model.sdf
+[1.119s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Suitcase2H/model.config
+[1.119s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/casa_obs.world
+[1.119s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/maze.world
+[1.119s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/casa.world
+[1.119s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Suitcase1
+[1.119s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Suitcase1/model.sdf
+[1.120s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Suitcase1/model.config
+[1.120s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/room.world
+[1.120s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Sofa
+[1.120s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Sofa/model.sdf
+[1.121s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Sofa/model.config
+[1.121s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/include/
+[1.121s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/include//turtlebot3_custom_simulation
+[1.122s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/include//turtlebot3_custom_simulation/turtlebot3_custom_simulation.hpp
+[1.122s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/ament_index/resource_index/package_run_dependencies/turtlebot3_custom_simulation
+[1.122s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/ament_index/resource_index/parent_prefix_path/turtlebot3_custom_simulation
+[1.122s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/environment/ament_prefix_path.sh
+[1.123s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/environment/ament_prefix_path.dsv
+[1.123s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/environment/path.sh
+[1.123s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/environment/path.dsv
+[1.123s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/local_setup.bash
+[1.123s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/local_setup.sh
+[1.124s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/local_setup.zsh
+[1.124s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/local_setup.dsv
+[1.124s] -- Installing: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.dsv
+[1.125s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/ament_index/resource_index/packages/turtlebot3_custom_simulation
+[1.125s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.125s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.125s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/cmake/turtlebot3_custom_simulationConfig.cmake
+[1.125s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/cmake/turtlebot3_custom_simulationConfig-version.cmake
+[1.125s] -- Up-to-date: /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.xml
+[1.131s] Invoked command in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/build/turtlebot3_custom_simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/juan/Documents/fundamentos_robotica/ws/install/ubicate_nene:/home/juan/Documents/fundamentos_robotica/ws/install/paquete1:/home/juan/Documents/fundamentos_robotica/ws/install/no_te_choques:/home/juan/Documents/fundamentos_robotica/ws/install/custom_code:/opt/ros/humble /usr/bin/cmake --install /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/turtlebot3_custom_simulation

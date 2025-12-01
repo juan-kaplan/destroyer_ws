@@ -1,0 +1,26 @@
+[0.759s] Invoking command in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/src/mappeate_y_ubicate': PYTHONPATH=/home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mappeate_y_ubicate build --build-base /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/build install --record /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/install.log --single-version-externally-managed install_data
+[0.973s] running egg_info
+[0.973s] writing ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/PKG-INFO
+[0.973s] writing dependency_links to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/dependency_links.txt
+[0.974s] writing entry points to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/entry_points.txt
+[0.974s] writing requirements to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/requires.txt
+[0.974s] writing top-level names to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/top_level.txt
+[0.976s] reading manifest file '../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/SOURCES.txt'
+[0.976s] adding license file 'LICENSE'
+[0.977s] writing manifest file '../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/SOURCES.txt'
+[0.977s] running build
+[0.977s] running build_py
+[0.977s] copying mappeate_y_ubicate/robot_functions.py -> /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate
+[0.977s] running install
+[0.978s] running install_lib
+[0.979s] copying /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate/robot_functions.py -> /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate
+[0.980s] byte-compiling /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate/robot_functions.py to robot_functions.cpython-310.pyc
+[0.982s] running install_data
+[0.982s] running install_egg_info
+[0.984s] removing '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate-0.0.0-py3.10.egg-info' (and everything under it)
+[0.984s] Copying ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info to /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate-0.0.0-py3.10.egg-info
+[0.985s] running install_scripts
+[1.003s] Installing delta_odom script to /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/mappeate_y_ubicate
+[1.004s] Installing fastslam script to /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/mappeate_y_ubicate
+[1.004s] writing list of installed files to '/home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/install.log'
+[1.035s] Invoked command in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/src/mappeate_y_ubicate' returned '0': PYTHONPATH=/home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mappeate_y_ubicate build --build-base /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/build install --record /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/install.log --single-version-externally-managed install_data

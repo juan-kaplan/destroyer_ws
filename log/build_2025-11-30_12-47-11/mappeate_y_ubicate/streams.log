@@ -1,0 +1,29 @@
+[1.917s] Invoking command in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/src/mappeate_y_ubicate': PYTHONPATH=/home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mappeate_y_ubicate build --build-base /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/build install --record /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/install.log --single-version-externally-managed install_data
+[2.595s] running egg_info
+[2.597s] writing ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/PKG-INFO
+[2.598s] writing dependency_links to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/dependency_links.txt
+[2.598s] writing entry points to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/entry_points.txt
+[2.598s] writing requirements to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/requires.txt
+[2.599s] writing top-level names to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/top_level.txt
+[2.604s] reading manifest file '../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/SOURCES.txt'
+[2.604s] adding license file 'LICENSE'
+[2.606s] writing manifest file '../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/SOURCES.txt'
+[2.606s] running build
+[2.607s] running build_py
+[2.607s] copying mappeate_y_ubicate/fastslam.py -> /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate
+[2.607s] copying mappeate_y_ubicate/robot_functions.py -> /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate
+[2.608s] running install
+[2.608s] running install_lib
+[2.610s] copying /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate/fastslam.py -> /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate
+[2.611s] copying /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate/robot_functions.py -> /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate
+[2.612s] byte-compiling /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate/fastslam.py to fastslam.cpython-310.pyc
+[2.616s] byte-compiling /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate/robot_functions.py to robot_functions.cpython-310.pyc
+[2.621s] running install_data
+[2.622s] running install_egg_info
+[2.626s] removing '/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate-0.0.0-py3.10.egg-info' (and everything under it)
+[2.627s] Copying ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info to /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate-0.0.0-py3.10.egg-info
+[2.629s] running install_scripts
+[2.683s] Installing delta_odom script to /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/mappeate_y_ubicate
+[2.684s] Installing fastslam script to /home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/mappeate_y_ubicate
+[2.685s] writing list of installed files to '/home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/install.log'
+[2.751s] Invoked command in '/home/juan/Documents/fundamentos_robotica/destroyer_ws/src/mappeate_y_ubicate' returned '0': PYTHONPATH=/home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/juan/Documents/fundamentos_robotica/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mappeate_y_ubicate build --build-base /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/build install --record /home/juan/Documents/fundamentos_robotica/destroyer_ws/build/mappeate_y_ubicate/install.log --single-version-externally-managed install_data

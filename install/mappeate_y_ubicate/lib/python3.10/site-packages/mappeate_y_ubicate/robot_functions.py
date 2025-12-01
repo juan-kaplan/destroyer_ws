@@ -3,8 +3,8 @@ import random
 import copy
 from scipy.special import logsumexp 
 
-HEIGHT = 500      # 50 meters / 0.1 resolution
-WIDTH = 500
+HEIGHT = 200      # 50 meters / 0.1 resolution
+WIDTH = 200
 RESOLUTION = 0.1  # 10 cm per pixel
 OX = - (WIDTH * RESOLUTION) / 2.0   # -25.0
 OY = - (HEIGHT * RESOLUTION) / 2.0  # -25.0   
@@ -70,6 +70,7 @@ class particle():
 
         H, W = self.grid.shape
         robot_i, robot_j = self.coordinate_to_grid(self.x, self.y, OX, OY, RESOLUTION)
+        print(f'robot_i: {robot_i}, robot_j: {robot_j}')
         if not (0 <= robot_i < H and 0 <= robot_j < W):
             # robot outside map → nothing to update
             return
@@ -85,7 +86,7 @@ class particle():
 
         xs, ys = points
 
-        beam_step = 1
+        beam_step = 20
         xs, ys = xs[::beam_step], ys[::beam_step]
 
         end_i, end_j = self.coordinate_to_grid(xs, ys, OX, OY, RESOLUTION)
@@ -133,8 +134,8 @@ class particle():
     def coordinate_to_grid(self, x, y, ox, oy, res):
         x_arr = np.asarray(x)
         y_arr = np.asarray(y)
-        j = ((x_arr - ox) / res).astype(int)
-        i = ((y_arr - oy) / res).astype(int)
+        j = np.floor((x_arr - ox) / res).astype(int)
+        i = np.floor((y_arr - oy) / res).astype(int)
         return i, j
 
     def _bresenham(self, i0, j0, i1, j1):
@@ -248,7 +249,7 @@ def _scan_reference(ranges, range_min, range_max, angle_min, angle_max, angle_in
             - points_map[0]: coordenadas x
             - points_map[1]: coordenadas y
         '''
-        LIDAR = (0.0, 0.0, np.pi)
+        LIDAR = (0.0, 0.0, 0.0)
         ranges = np.asarray(ranges, float)
         angles = angle_min + np.arange(len(ranges)) * angle_increment
 
