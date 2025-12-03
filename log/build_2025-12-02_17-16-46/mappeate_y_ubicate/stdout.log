@@ -1,0 +1,21 @@
+running egg_info
+writing ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/PKG-INFO
+writing dependency_links to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/dependency_links.txt
+writing entry points to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/entry_points.txt
+writing requirements to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/requires.txt
+writing top-level names to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/top_level.txt
+reading manifest file '../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info to /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate-0.0.0-py3.10.egg-info
+running install_scripts
+Installing delta_odom script to /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/mappeate_y_ubicate
+Installing fastslam script to /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/mappeate_y_ubicate
+writing list of installed files to '/home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/install.log'

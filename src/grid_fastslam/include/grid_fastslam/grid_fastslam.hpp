@@ -20,9 +20,9 @@ namespace grid_fastslam
     // ==========================================
     // 1. CONSTANTS (From robot_functions.py)
     // ==========================================
-    constexpr int MAP_HEIGHT = 200;
-    constexpr int MAP_WIDTH = 200;
-    constexpr double RESOLUTION = 0.1;
+    constexpr int MAP_HEIGHT = 100;
+    constexpr int MAP_WIDTH = 100;
+    constexpr double RESOLUTION = 0.075;
     constexpr double OX = -(MAP_WIDTH * RESOLUTION) / 2.0;
     constexpr double OY = -(MAP_HEIGHT * RESOLUTION) / 2.0;
 
@@ -85,7 +85,8 @@ namespace grid_fastslam
         int num_particles_;
         nav_msgs::msg::Path path_msg_;
         int map_update_counter = 0;
-        int map_update_interval = 3;
+        int map_update_interval = 1;
+        int current_best_index_ = 0;
 
         // Random Number Generation
         std::mt19937 rng_;

@@ -49,10 +49,10 @@ namespace grid_fastslam
 
     void GridFastSlam::move_particles(double dr1, double dr2, double dt)
     {
-        const double alpha1 = 0.05;
-        const double alpha2 = 0.05;
-        const double alpha3 = 0.001;
-        const double alpha4 = 0.001;
+        const double alpha1 = 0.2;
+        const double alpha2 = 0.2;
+        const double alpha3 = 0.02;
+        const double alpha4 = 0.02;
 
         double sigma_rot1 = alpha1 * std::abs(dr1) + alpha2 * dt;
         double sigma_trans = alpha3 * dt + alpha4 * (std::abs(dr1) + std::abs(dr2));
@@ -146,8 +146,8 @@ namespace grid_fastslam
         double angle = scan->angle_min;
 
         // Define Field of View Limits (-PI/2 to +PI/2)
-        const double angle_min_limit = -M_PI_4;
-        const double angle_max_limit = M_PI_4;
+        const double angle_min_limit = -M_PI_2;
+        const double angle_max_limit = M_PI_2;
 
         for (size_t i = 0; i < scan->ranges.size(); ++i)
         {
@@ -343,6 +343,7 @@ namespace grid_fastslam
                 if (r >= 0 && r < MAP_HEIGHT && c >= 0 && c < MAP_WIDTH)
                 {
                     float log_odds = p.grid[r * MAP_WIDTH + c];
+
                     double prob = 1.0 / (1.0 + std::exp(-log_odds));
                     prob = std::max(1e-6, std::min(prob, 1.0 - 1e-6));
 
@@ -400,9 +401,6 @@ namespace grid_fastslam
             std::vector<Particle> new_particles;
             new_particles.reserve(num_particles_);
 
-            // --- Systematic Resampling (Low Variance Sampling) ---
-            // This is the standard algorithm for particle filters
-
             std::uniform_real_distribution<double> dist(0.0, 1.0 / num_particles_);
             double r = dist(rng_);           // Random start point
             double c = particles_[0].weight; // Cumulative weight
@@ -427,7 +425,7 @@ namespace grid_fastslam
 
             // Replace old set with new set
             particles_ = new_particles;
-            // RCLCPP_INFO(this->get_logger(), "Resampled! N_eff: %.2f", n_eff);
+            current_best_index_ = 0;
         }
     }
 
@@ -465,7 +463,18 @@ namespace grid_fastslam
                                         [](const Particle &a, const Particle &b)
                                         { return a.weight < b.weight; });
 
-        const auto &best_p = *best_it;
+        int actual_best_index = std::distance(particles_.begin(), best_it);
+        double best_weight = particles_[actual_best_index].weight;
+
+        double current_display_weight = particles_[current_best_index_].weight;
+        if (best_weight > (current_display_weight * 1.20))
+        {
+            current_best_index_ = actual_best_index;
+        }
+        if (current_best_index_ >= num_particles_)
+            current_best_index_ = 0;
+
+        const auto &display_p = particles_[current_best_index_];
 
         // --- Publish Map ---
         nav_msgs::msg::OccupancyGrid map_msg;
@@ -483,10 +492,10 @@ namespace grid_fastslam
         map_msg.data.resize(MAP_WIDTH * MAP_HEIGHT);
 
         // Convert Log-Odds to Int8 [0-100] for RViz
-        for (size_t i = 0; i < best_p.grid.size(); ++i)
+        for (size_t i = 0; i < display_p.grid.size(); ++i)
         {
             // Probability p = 1 / (1 + exp(-l))
-            double p = 1.0 / (1.0 + std::exp(-best_p.grid[i]));
+            double p = 1.0 / (1.0 + std::exp(-display_p.grid[i]));
             map_msg.data[i] = static_cast<int8_t>(p * 100);
         }
         map_pub_->publish(map_msg);
@@ -494,12 +503,12 @@ namespace grid_fastslam
         // --- Publish Path ---
         geometry_msgs::msg::PoseStamped pose;
         pose.header = map_msg.header;
-        pose.pose.position.x = best_p.x;
-        pose.pose.position.y = best_p.y;
+        pose.pose.position.x = display_p.x;
+        pose.pose.position.y = display_p.y;
 
         // Yaw to Quaternion (Simple Z-axis rotation)
-        pose.pose.orientation.z = std::sin(best_p.yaw * 0.5);
-        pose.pose.orientation.w = std::cos(best_p.yaw * 0.5);
+        pose.pose.orientation.z = std::sin(display_p.yaw * 0.5);
+        pose.pose.orientation.w = std::cos(display_p.yaw * 0.5);
 
         path_msg_.header.stamp = this->now();
         path_msg_.poses.push_back(pose);

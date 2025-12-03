@@ -1,0 +1,357 @@
+[0.045s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.045s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=28, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x77fa48f5b190>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x77fa48f5ab90>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x77fa48f5ab90>>, mixin_verb=('build',))
+[0.113s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.113s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.113s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.113s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.113s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.113s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.113s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/alumno1/Documents/destroyer_ws'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msgs) by extension 'ignore'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msgs) by extension 'ignore_ament_install'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msgs) by extensions ['colcon_pkg']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msgs) by extension 'colcon_pkg'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msgs) by extensions ['colcon_meta']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msgs) by extension 'colcon_meta'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msgs) by extensions ['ros']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msgs) by extension 'ros'
+[0.120s] DEBUG:colcon.colcon_core.package_identification:Package 'src/custom_msgs' with type 'ros.ament_cmake' and name 'custom_msgs'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/grid_fastslam) by extensions ['ignore', 'ignore_ament_install']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/grid_fastslam) by extension 'ignore'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/grid_fastslam) by extension 'ignore_ament_install'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/grid_fastslam) by extensions ['colcon_pkg']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/grid_fastslam) by extension 'colcon_pkg'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/grid_fastslam) by extensions ['colcon_meta']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/grid_fastslam) by extension 'colcon_meta'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/grid_fastslam) by extensions ['ros']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/grid_fastslam) by extension 'ros'
+[0.121s] DEBUG:colcon.colcon_core.package_identification:Package 'src/grid_fastslam' with type 'ros.ament_cmake' and name 'grid_fastslam'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/mappeate_y_ubicate) by extensions ['ignore', 'ignore_ament_install']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/mappeate_y_ubicate) by extension 'ignore'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/mappeate_y_ubicate) by extension 'ignore_ament_install'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/mappeate_y_ubicate) by extensions ['colcon_pkg']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/mappeate_y_ubicate) by extension 'colcon_pkg'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/mappeate_y_ubicate) by extensions ['colcon_meta']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/mappeate_y_ubicate) by extension 'colcon_meta'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/mappeate_y_ubicate) by extensions ['ros']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/mappeate_y_ubicate) by extension 'ros'
+[0.121s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mappeate_y_ubicate' with type 'ros.ament_python' and name 'mappeate_y_ubicate'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/odom_tools) by extensions ['ignore', 'ignore_ament_install']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/odom_tools) by extension 'ignore'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/odom_tools) by extension 'ignore_ament_install'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/odom_tools) by extensions ['colcon_pkg']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/odom_tools) by extension 'colcon_pkg'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/odom_tools) by extensions ['colcon_meta']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/odom_tools) by extension 'colcon_meta'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/odom_tools) by extensions ['ros']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/odom_tools) by extension 'ros'
+[0.122s] DEBUG:colcon.colcon_core.package_identification:Package 'src/odom_tools' with type 'ros.ament_python' and name 'odom_tools'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_custom_simulation) by extensions ['ignore', 'ignore_ament_install']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_custom_simulation) by extension 'ignore'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_custom_simulation) by extension 'ignore_ament_install'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_custom_simulation) by extensions ['colcon_pkg']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_custom_simulation) by extension 'colcon_pkg'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_custom_simulation) by extensions ['colcon_meta']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_custom_simulation) by extension 'colcon_meta'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_custom_simulation) by extensions ['ros']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_custom_simulation) by extension 'ros'
+[0.126s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtlebot3_custom_simulation' with type 'ros.ament_cmake' and name 'turtlebot3_custom_simulation'
+[0.126s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.126s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.126s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.126s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.126s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.136s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.136s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.137s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 16 installed packages in /home/alumno1/turtlebot3_ws/install
+[0.137s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 363 installed packages in /opt/ros/humble
+[0.138s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'cmake_args' from command line to 'None'
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'cmake_target' from command line to 'None'
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'custom_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.156s] DEBUG:colcon.colcon_core.verb:Building package 'custom_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/alumno1/Documents/destroyer_ws/build/custom_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/alumno1/Documents/destroyer_ws/install/custom_msgs', 'merge_install': False, 'path': '/home/alumno1/Documents/destroyer_ws/src/custom_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'mappeate_y_ubicate' build argument 'cmake_args' from command line to 'None'
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'mappeate_y_ubicate' build argument 'cmake_target' from command line to 'None'
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'mappeate_y_ubicate' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'mappeate_y_ubicate' build argument 'cmake_clean_cache' from command line to 'False'
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'mappeate_y_ubicate' build argument 'cmake_clean_first' from command line to 'False'
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'mappeate_y_ubicate' build argument 'cmake_force_configure' from command line to 'False'
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'mappeate_y_ubicate' build argument 'ament_cmake_args' from command line to 'None'
+[0.156s] Level 5:colcon.colcon_core.verb:set package 'mappeate_y_ubicate' build argument 'catkin_cmake_args' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'mappeate_y_ubicate' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.157s] DEBUG:colcon.colcon_core.verb:Building package 'mappeate_y_ubicate' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate', 'merge_install': False, 'path': '/home/alumno1/Documents/destroyer_ws/src/mappeate_y_ubicate', 'symlink_install': False, 'test_result_base': None}
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_custom_simulation' build argument 'cmake_args' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_custom_simulation' build argument 'cmake_target' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_custom_simulation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_custom_simulation' build argument 'cmake_clean_cache' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_custom_simulation' build argument 'cmake_clean_first' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_custom_simulation' build argument 'cmake_force_configure' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_custom_simulation' build argument 'ament_cmake_args' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_custom_simulation' build argument 'catkin_cmake_args' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_custom_simulation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.157s] DEBUG:colcon.colcon_core.verb:Building package 'turtlebot3_custom_simulation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/alumno1/Documents/destroyer_ws/build/turtlebot3_custom_simulation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation', 'merge_install': False, 'path': '/home/alumno1/Documents/destroyer_ws/src/turtlebot3_custom_simulation', 'symlink_install': False, 'test_result_base': None}
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'grid_fastslam' build argument 'cmake_args' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'grid_fastslam' build argument 'cmake_target' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'grid_fastslam' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'grid_fastslam' build argument 'cmake_clean_cache' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'grid_fastslam' build argument 'cmake_clean_first' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'grid_fastslam' build argument 'cmake_force_configure' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'grid_fastslam' build argument 'ament_cmake_args' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'grid_fastslam' build argument 'catkin_cmake_args' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'grid_fastslam' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.157s] DEBUG:colcon.colcon_core.verb:Building package 'grid_fastslam' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/alumno1/Documents/destroyer_ws/build/grid_fastslam', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/alumno1/Documents/destroyer_ws/install/grid_fastslam', 'merge_install': False, 'path': '/home/alumno1/Documents/destroyer_ws/src/grid_fastslam', 'symlink_install': False, 'test_result_base': None}
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'odom_tools' build argument 'cmake_args' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'odom_tools' build argument 'cmake_target' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'odom_tools' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'odom_tools' build argument 'cmake_clean_cache' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'odom_tools' build argument 'cmake_clean_first' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'odom_tools' build argument 'cmake_force_configure' from command line to 'False'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'odom_tools' build argument 'ament_cmake_args' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'odom_tools' build argument 'catkin_cmake_args' from command line to 'None'
+[0.157s] Level 5:colcon.colcon_core.verb:set package 'odom_tools' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.157s] DEBUG:colcon.colcon_core.verb:Building package 'odom_tools' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/alumno1/Documents/destroyer_ws/build/odom_tools', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/alumno1/Documents/destroyer_ws/install/odom_tools', 'merge_install': False, 'path': '/home/alumno1/Documents/destroyer_ws/src/odom_tools', 'symlink_install': False, 'test_result_base': None}
+[0.157s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.158s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.158s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/alumno1/Documents/destroyer_ws/src/custom_msgs' with build type 'ament_cmake'
+[0.158s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/alumno1/Documents/destroyer_ws/src/custom_msgs'
+[0.159s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.159s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.159s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.161s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/alumno1/Documents/destroyer_ws/src/mappeate_y_ubicate' with build type 'ament_python'
+[0.161s] Level 1:colcon.colcon_core.shell:create_environment_hook('mappeate_y_ubicate', 'ament_prefix_path')
+[0.161s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/hook/ament_prefix_path.ps1'
+[0.161s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/hook/ament_prefix_path.dsv'
+[0.161s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/hook/ament_prefix_path.sh'
+[0.162s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.162s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.163s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/alumno1/Documents/destroyer_ws/src/turtlebot3_custom_simulation' with build type 'ament_cmake'
+[0.163s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/alumno1/Documents/destroyer_ws/src/turtlebot3_custom_simulation'
+[0.163s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.163s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.168s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alumno1/Documents/destroyer_ws/build/custom_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alumno1/turtlebot3_ws/install/turtlebot3_teleop:/home/alumno1/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/alumno1/Documents/destroyer_ws/build/custom_msgs -- -j28 -l28
+[0.277s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/alumno1/Documents/destroyer_ws/src/mappeate_y_ubicate'
+[0.277s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.277s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.284s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alumno1/Documents/destroyer_ws/build/turtlebot3_custom_simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alumno1/turtlebot3_ws/install/turtlebot3_teleop:/home/alumno1/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/alumno1/Documents/destroyer_ws/build/turtlebot3_custom_simulation -- -j28 -l28
+[0.324s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alumno1/Documents/destroyer_ws/build/turtlebot3_custom_simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alumno1/turtlebot3_ws/install/turtlebot3_teleop:/home/alumno1/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/alumno1/Documents/destroyer_ws/build/turtlebot3_custom_simulation -- -j28 -l28
+[0.330s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alumno1/Documents/destroyer_ws/build/turtlebot3_custom_simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alumno1/turtlebot3_ws/install/turtlebot3_teleop:/home/alumno1/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/alumno1/Documents/destroyer_ws/build/turtlebot3_custom_simulation
+[0.336s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alumno1/Documents/destroyer_ws/build/custom_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alumno1/turtlebot3_ws/install/turtlebot3_teleop:/home/alumno1/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/alumno1/Documents/destroyer_ws/build/custom_msgs -- -j28 -l28
+[0.337s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alumno1/Documents/destroyer_ws/build/custom_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alumno1/turtlebot3_ws/install/turtlebot3_teleop:/home/alumno1/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/alumno1/Documents/destroyer_ws/build/custom_msgs
+[0.344s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot3_custom_simulation)
+[0.346s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alumno1/Documents/destroyer_ws/build/turtlebot3_custom_simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alumno1/turtlebot3_ws/install/turtlebot3_teleop:/home/alumno1/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/alumno1/Documents/destroyer_ws/build/turtlebot3_custom_simulation
+[0.348s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation' for CMake module files
+[0.349s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation' for CMake config files
+[0.349s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_custom_simulation', 'cmake_prefix_path')
+[0.349s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/hook/cmake_prefix_path.ps1'
+[0.349s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/hook/cmake_prefix_path.dsv'
+[0.349s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/hook/cmake_prefix_path.sh'
+[0.350s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/lib'
+[0.350s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/bin'
+[0.350s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/lib/pkgconfig/turtlebot3_custom_simulation.pc'
+[0.350s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/lib/python3.10/site-packages'
+[0.350s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/bin'
+[0.350s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.ps1'
+[0.350s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.dsv'
+[0.351s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.sh'
+[0.352s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.bash'
+[0.352s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.zsh'
+[0.352s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/colcon-core/packages/turtlebot3_custom_simulation)
+[0.353s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot3_custom_simulation)
+[0.353s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation' for CMake module files
+[0.353s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation' for CMake config files
+[0.353s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_custom_simulation', 'cmake_prefix_path')
+[0.353s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/hook/cmake_prefix_path.ps1'
+[0.354s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/hook/cmake_prefix_path.dsv'
+[0.354s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/hook/cmake_prefix_path.sh'
+[0.354s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/lib'
+[0.354s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/bin'
+[0.354s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/lib/pkgconfig/turtlebot3_custom_simulation.pc'
+[0.354s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/lib/python3.10/site-packages'
+[0.354s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/bin'
+[0.354s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.ps1'
+[0.354s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.dsv'
+[0.355s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.sh'
+[0.355s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.bash'
+[0.355s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.zsh'
+[0.355s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/colcon-core/packages/turtlebot3_custom_simulation)
+[0.372s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_msgs)
+[0.372s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/custom_msgs' for CMake module files
+[0.372s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alumno1/Documents/destroyer_ws/build/custom_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alumno1/turtlebot3_ws/install/turtlebot3_teleop:/home/alumno1/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/alumno1/Documents/destroyer_ws/build/custom_msgs
+[0.373s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/custom_msgs' for CMake config files
+[0.373s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_msgs', 'cmake_prefix_path')
+[0.373s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/cmake_prefix_path.ps1'
+[0.374s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/cmake_prefix_path.dsv'
+[0.374s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/cmake_prefix_path.sh'
+[0.374s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/lib'
+[0.374s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_msgs', 'ld_library_path_lib')
+[0.375s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/ld_library_path_lib.ps1'
+[0.375s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/ld_library_path_lib.dsv'
+[0.375s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/ld_library_path_lib.sh'
+[0.375s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/bin'
+[0.375s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/lib/pkgconfig/custom_msgs.pc'
+[0.376s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/lib/python3.10/site-packages'
+[0.376s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/bin'
+[0.376s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/custom_msgs/package.ps1'
+[0.376s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/custom_msgs/package.dsv'
+[0.377s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/custom_msgs/package.sh'
+[0.377s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/custom_msgs/package.bash'
+[0.377s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/custom_msgs/package.zsh'
+[0.377s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/colcon-core/packages/custom_msgs)
+[0.378s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_msgs)
+[0.378s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/custom_msgs' for CMake module files
+[0.378s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/custom_msgs' for CMake config files
+[0.379s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_msgs', 'cmake_prefix_path')
+[0.379s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/cmake_prefix_path.ps1'
+[0.379s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/cmake_prefix_path.dsv'
+[0.379s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/cmake_prefix_path.sh'
+[0.379s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/lib'
+[0.379s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_msgs', 'ld_library_path_lib')
+[0.380s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/ld_library_path_lib.ps1'
+[0.380s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/ld_library_path_lib.dsv'
+[0.380s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/custom_msgs/hook/ld_library_path_lib.sh'
+[0.380s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/bin'
+[0.380s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/lib/pkgconfig/custom_msgs.pc'
+[0.380s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/lib/python3.10/site-packages'
+[0.380s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/bin'
+[0.380s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/custom_msgs/package.ps1'
+[0.381s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/custom_msgs/package.dsv'
+[0.381s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/custom_msgs/package.sh'
+[0.381s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/custom_msgs/package.bash'
+[0.381s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/custom_msgs/package.zsh'
+[0.381s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alumno1/Documents/destroyer_ws/install/custom_msgs/share/colcon-core/packages/custom_msgs)
+[0.381s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/alumno1/Documents/destroyer_ws/src/grid_fastslam' with build type 'ament_cmake'
+[0.381s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/alumno1/Documents/destroyer_ws/src/grid_fastslam'
+[0.381s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.381s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.383s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/alumno1/Documents/destroyer_ws/src/odom_tools' with build type 'ament_python'
+[0.383s] Level 1:colcon.colcon_core.shell:create_environment_hook('odom_tools', 'ament_prefix_path')
+[0.383s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alumno1/Documents/destroyer_ws/install/odom_tools/share/odom_tools/hook/ament_prefix_path.ps1'
+[0.384s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alumno1/Documents/destroyer_ws/install/odom_tools/share/odom_tools/hook/ament_prefix_path.dsv'
+[0.384s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alumno1/Documents/destroyer_ws/install/odom_tools/share/odom_tools/hook/ament_prefix_path.sh'
+[0.384s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.384s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.388s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alumno1/Documents/destroyer_ws/build/grid_fastslam': AMENT_PREFIX_PATH=/home/alumno1/Documents/destroyer_ws/install/custom_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/alumno1/Documents/destroyer_ws/install/custom_msgs:/home/alumno1/turtlebot3_ws/install/turtlebot3:/home/alumno1/turtlebot3_ws/install/turtlebot3_simulations:/home/alumno1/turtlebot3_ws/install/turtlebot3_bringup:/home/alumno1/turtlebot3_ws/install/turtlebot3_node:/home/alumno1/turtlebot3_ws/install/turtlebot3_navigation2:/home/alumno1/turtlebot3_ws/install/turtlebot3_fake_node:/home/alumno1/turtlebot3_ws/install/turtlebot3_custom_simulation:/home/alumno1/turtlebot3_ws/install/turtlebot3_msgs:/home/alumno1/turtlebot3_ws/install/turtlebot3_gazebo:/home/alumno1/turtlebot3_ws/install/turtlebot3_description:/home/alumno1/turtlebot3_ws/install/turtlebot3_cartographer:/home/alumno1/turtlebot3_ws/install/dynamixel_sdk_examples:/home/alumno1/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/alumno1/turtlebot3_ws/install/dynamixel_sdk:/home/alumno1/turtlebot3_ws/install/turtlebot3_teleop:/home/alumno1/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble LD_LIBRARY_PATH=/home/alumno1/Documents/destroyer_ws/install/custom_msgs/lib:/home/alumno1/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/alumno1/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/alumno1/turtlebot3_ws/install/dynamixel_sdk/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/alumno1/Documents/destroyer_ws/install/custom_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/alumno1/Documents/destroyer_ws/build/grid_fastslam -- -j28 -l28
+[0.505s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/alumno1/Documents/destroyer_ws/src/odom_tools'
+[0.505s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.505s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.509s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alumno1/Documents/destroyer_ws/src/mappeate_y_ubicate': PYTHONPATH=/home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mappeate_y_ubicate build --build-base /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build install --record /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/install.log --single-version-externally-managed install_data
+[0.643s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate' for CMake module files
+[0.644s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alumno1/Documents/destroyer_ws/src/mappeate_y_ubicate' returned '0': PYTHONPATH=/home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mappeate_y_ubicate build --build-base /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build install --record /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/install.log --single-version-externally-managed install_data
+[0.644s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate' for CMake config files
+[0.644s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib'
+[0.644s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/bin'
+[0.644s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/pkgconfig/mappeate_y_ubicate.pc'
+[0.645s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages'
+[0.645s] Level 1:colcon.colcon_core.shell:create_environment_hook('mappeate_y_ubicate', 'pythonpath')
+[0.645s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/hook/pythonpath.ps1'
+[0.645s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/hook/pythonpath.dsv'
+[0.645s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/hook/pythonpath.sh'
+[0.646s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/bin'
+[0.646s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mappeate_y_ubicate)
+[0.646s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/package.ps1'
+[0.646s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/package.dsv'
+[0.647s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/package.sh'
+[0.647s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/package.bash'
+[0.647s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/package.zsh'
+[0.647s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/colcon-core/packages/mappeate_y_ubicate)
+[0.666s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alumno1/Documents/destroyer_ws/src/odom_tools': AMENT_PREFIX_PATH=/home/alumno1/Documents/destroyer_ws/install/custom_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/alumno1/Documents/destroyer_ws/install/custom_msgs:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/alumno1/Documents/destroyer_ws/install/custom_msgs/lib:/home/alumno1/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/alumno1/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/alumno1/turtlebot3_ws/install/dynamixel_sdk/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/alumno1/Documents/destroyer_ws/build/odom_tools/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/alumno1/Documents/destroyer_ws/install/odom_tools/lib/python3.10/site-packages:/home/alumno1/Documents/destroyer_ws/install/custom_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/odom_tools build --build-base /home/alumno1/Documents/destroyer_ws/build/odom_tools/build install --record /home/alumno1/Documents/destroyer_ws/build/odom_tools/install.log --single-version-externally-managed install_data
+[0.794s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/odom_tools' for CMake module files
+[0.794s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/odom_tools' for CMake config files
+[0.794s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alumno1/Documents/destroyer_ws/src/odom_tools' returned '0': AMENT_PREFIX_PATH=/home/alumno1/Documents/destroyer_ws/install/custom_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/alumno1/Documents/destroyer_ws/install/custom_msgs:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/alumno1/Documents/destroyer_ws/install/custom_msgs/lib:/home/alumno1/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/alumno1/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/alumno1/turtlebot3_ws/install/dynamixel_sdk/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/alumno1/Documents/destroyer_ws/build/odom_tools/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/alumno1/Documents/destroyer_ws/install/odom_tools/lib/python3.10/site-packages:/home/alumno1/Documents/destroyer_ws/install/custom_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/odom_tools build --build-base /home/alumno1/Documents/destroyer_ws/build/odom_tools/build install --record /home/alumno1/Documents/destroyer_ws/build/odom_tools/install.log --single-version-externally-managed install_data
+[0.795s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/odom_tools/lib'
+[0.795s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/odom_tools/bin'
+[0.795s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/odom_tools/lib/pkgconfig/odom_tools.pc'
+[0.795s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/odom_tools/lib/python3.10/site-packages'
+[0.795s] Level 1:colcon.colcon_core.shell:create_environment_hook('odom_tools', 'pythonpath')
+[0.795s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alumno1/Documents/destroyer_ws/install/odom_tools/share/odom_tools/hook/pythonpath.ps1'
+[0.795s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alumno1/Documents/destroyer_ws/install/odom_tools/share/odom_tools/hook/pythonpath.dsv'
+[0.795s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alumno1/Documents/destroyer_ws/install/odom_tools/share/odom_tools/hook/pythonpath.sh'
+[0.795s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/odom_tools/bin'
+[0.795s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(odom_tools)
+[0.796s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/odom_tools/share/odom_tools/package.ps1'
+[0.796s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alumno1/Documents/destroyer_ws/install/odom_tools/share/odom_tools/package.dsv'
+[0.796s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/odom_tools/share/odom_tools/package.sh'
+[0.796s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/odom_tools/share/odom_tools/package.bash'
+[0.796s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/odom_tools/share/odom_tools/package.zsh'
+[0.796s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alumno1/Documents/destroyer_ws/install/odom_tools/share/colcon-core/packages/odom_tools)
+[2.897s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alumno1/Documents/destroyer_ws/build/grid_fastslam' returned '2': AMENT_PREFIX_PATH=/home/alumno1/Documents/destroyer_ws/install/custom_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/alumno1/Documents/destroyer_ws/install/custom_msgs:/home/alumno1/turtlebot3_ws/install/turtlebot3:/home/alumno1/turtlebot3_ws/install/turtlebot3_simulations:/home/alumno1/turtlebot3_ws/install/turtlebot3_bringup:/home/alumno1/turtlebot3_ws/install/turtlebot3_node:/home/alumno1/turtlebot3_ws/install/turtlebot3_navigation2:/home/alumno1/turtlebot3_ws/install/turtlebot3_fake_node:/home/alumno1/turtlebot3_ws/install/turtlebot3_custom_simulation:/home/alumno1/turtlebot3_ws/install/turtlebot3_msgs:/home/alumno1/turtlebot3_ws/install/turtlebot3_gazebo:/home/alumno1/turtlebot3_ws/install/turtlebot3_description:/home/alumno1/turtlebot3_ws/install/turtlebot3_cartographer:/home/alumno1/turtlebot3_ws/install/dynamixel_sdk_examples:/home/alumno1/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces:/home/alumno1/turtlebot3_ws/install/dynamixel_sdk:/home/alumno1/turtlebot3_ws/install/turtlebot3_teleop:/home/alumno1/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble LD_LIBRARY_PATH=/home/alumno1/Documents/destroyer_ws/install/custom_msgs/lib:/home/alumno1/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/alumno1/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/alumno1/turtlebot3_ws/install/dynamixel_sdk/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/alumno1/Documents/destroyer_ws/install/custom_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/alumno1/Documents/destroyer_ws/build/grid_fastslam -- -j28 -l28
+[2.898s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(grid_fastslam)
+[2.898s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/grid_fastslam' for CMake module files
+[2.898s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/grid_fastslam' for CMake config files
+[2.898s] Level 1:colcon.colcon_core.shell:create_environment_hook('grid_fastslam', 'cmake_prefix_path')
+[2.898s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alumno1/Documents/destroyer_ws/install/grid_fastslam/share/grid_fastslam/hook/cmake_prefix_path.ps1'
+[2.899s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alumno1/Documents/destroyer_ws/install/grid_fastslam/share/grid_fastslam/hook/cmake_prefix_path.dsv'
+[2.899s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alumno1/Documents/destroyer_ws/install/grid_fastslam/share/grid_fastslam/hook/cmake_prefix_path.sh'
+[2.899s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/grid_fastslam/lib'
+[2.899s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/grid_fastslam/bin'
+[2.899s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/grid_fastslam/lib/pkgconfig/grid_fastslam.pc'
+[2.899s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/grid_fastslam/lib/python3.10/site-packages'
+[2.899s] Level 1:colcon.colcon_core.environment:checking '/home/alumno1/Documents/destroyer_ws/install/grid_fastslam/bin'
+[2.899s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/grid_fastslam/share/grid_fastslam/package.ps1'
+[2.899s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alumno1/Documents/destroyer_ws/install/grid_fastslam/share/grid_fastslam/package.dsv'
+[2.900s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/grid_fastslam/share/grid_fastslam/package.sh'
+[2.900s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/grid_fastslam/share/grid_fastslam/package.bash'
+[2.900s] INFO:colcon.colcon_core.shell:Creating package script '/home/alumno1/Documents/destroyer_ws/install/grid_fastslam/share/grid_fastslam/package.zsh'
+[2.900s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alumno1/Documents/destroyer_ws/install/grid_fastslam/share/colcon-core/packages/grid_fastslam)
+[2.910s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.910s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.910s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[2.910s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.913s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.913s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.913s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.917s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.918s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alumno1/Documents/destroyer_ws/install/local_setup.ps1'
+[2.918s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/alumno1/Documents/destroyer_ws/install/_local_setup_util_ps1.py'
+[2.919s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alumno1/Documents/destroyer_ws/install/setup.ps1'
+[2.919s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alumno1/Documents/destroyer_ws/install/local_setup.sh'
+[2.919s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/alumno1/Documents/destroyer_ws/install/_local_setup_util_sh.py'
+[2.920s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alumno1/Documents/destroyer_ws/install/setup.sh'
+[2.920s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alumno1/Documents/destroyer_ws/install/local_setup.bash'
+[2.920s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alumno1/Documents/destroyer_ws/install/setup.bash'
+[2.921s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alumno1/Documents/destroyer_ws/install/local_setup.zsh'
+[2.921s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alumno1/Documents/destroyer_ws/install/setup.zsh'
