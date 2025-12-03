@@ -1,0 +1,23 @@
+[0.430s] Invoking command in '/home/admlinar/Documents/destroyer_ws/src/mappeate_y_ubicate': PYTHONPATH=/home/admlinar/Documents/destroyer_ws/build/mappeate_y_ubicate/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/admlinar/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mappeate_y_ubicate build --build-base /home/admlinar/Documents/destroyer_ws/build/mappeate_y_ubicate/build install --record /home/admlinar/Documents/destroyer_ws/build/mappeate_y_ubicate/install.log --single-version-externally-managed install_data
+[0.560s] running egg_info
+[0.560s] writing ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/PKG-INFO
+[0.560s] writing dependency_links to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/dependency_links.txt
+[0.560s] writing entry points to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/entry_points.txt
+[0.560s] writing requirements to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/requires.txt
+[0.560s] writing top-level names to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/top_level.txt
+[0.561s] reading manifest file '../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/SOURCES.txt'
+[0.561s] adding license file 'LICENSE'
+[0.561s] writing manifest file '../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/SOURCES.txt'
+[0.561s] running build
+[0.561s] running build_py
+[0.561s] running install
+[0.562s] running install_lib
+[0.562s] running install_data
+[0.562s] running install_egg_info
+[0.563s] removing '/home/admlinar/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate-0.0.0-py3.10.egg-info' (and everything under it)
+[0.563s] Copying ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info to /home/admlinar/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate-0.0.0-py3.10.egg-info
+[0.564s] running install_scripts
+[0.576s] Installing delta_odom script to /home/admlinar/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/mappeate_y_ubicate
+[0.576s] Installing fastslam script to /home/admlinar/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/mappeate_y_ubicate
+[0.576s] writing list of installed files to '/home/admlinar/Documents/destroyer_ws/build/mappeate_y_ubicate/install.log'
+[0.590s] Invoked command in '/home/admlinar/Documents/destroyer_ws/src/mappeate_y_ubicate' returned '0': PYTHONPATH=/home/admlinar/Documents/destroyer_ws/build/mappeate_y_ubicate/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/admlinar/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mappeate_y_ubicate build --build-base /home/admlinar/Documents/destroyer_ws/build/mappeate_y_ubicate/build install --record /home/admlinar/Documents/destroyer_ws/build/mappeate_y_ubicate/install.log --single-version-externally-managed install_data

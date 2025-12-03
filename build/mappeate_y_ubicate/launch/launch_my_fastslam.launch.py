@@ -1,1 +1,0 @@
-/home/alumno1/Documents/destroyer_ws/src/mappeate_y_ubicate/launch/launch_my_fastslam.launch.py

@@ -1,3 +1,0 @@
-[console_scripts]
-delta_odom = odom_tools.delta_odom:main
-

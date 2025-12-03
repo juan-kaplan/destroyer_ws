@@ -1,1 +1,2 @@
-/home/alumno1/Documents/destroyer_ws/build/grid_fastslam/ament_cmake_environment_hooks/local_setup.dsv
+source;share/grid_fastslam/environment/ament_prefix_path.sh
+source;share/grid_fastslam/environment/path.sh

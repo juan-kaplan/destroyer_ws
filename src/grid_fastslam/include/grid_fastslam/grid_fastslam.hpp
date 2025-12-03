@@ -6,6 +6,7 @@
 #include <random>
 #include <algorithm>
 #include <memory>
+#include <chrono>
 
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/laser_scan.hpp"
@@ -13,6 +14,9 @@
 #include "nav_msgs/msg/path.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"
 #include "custom_msgs/msg/delta_odom.hpp"
+#include "sensor_msgs/msg/point_cloud2.hpp"
+#include "sensor_msgs/point_cloud2_iterator.hpp"
+
 
 namespace grid_fastslam
 {
@@ -22,7 +26,7 @@ namespace grid_fastslam
     // ==========================================
     constexpr int MAP_HEIGHT = 100;
     constexpr int MAP_WIDTH = 100;
-    constexpr double RESOLUTION = 0.075;
+    constexpr double RESOLUTION = 0.1;
     constexpr double OX = -(MAP_WIDTH * RESOLUTION) / 2.0;
     constexpr double OY = -(MAP_HEIGHT * RESOLUTION) / 2.0;
 
@@ -79,6 +83,9 @@ namespace grid_fastslam
 
         rclcpp::Publisher<nav_msgs::msg::OccupancyGrid>::SharedPtr map_pub_;
         rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr path_pub_;
+
+        rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr pose_pub_;
+        rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr particles_pub_;
 
         // --- Internal Data ---
         std::vector<Particle> particles_;

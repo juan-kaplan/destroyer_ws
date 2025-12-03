@@ -27,6 +27,8 @@ namespace grid_fastslam
 
         map_pub_ = this->create_publisher<nav_msgs::msg::OccupancyGrid>("/map", map_qos);
         path_pub_ = this->create_publisher<nav_msgs::msg::Path>("/particle_robot_path", 10);
+        pose_pub_ = this->create_publisher<geometry_msgs::msg::PoseStamped>("/particle_pose", 10);
+        particles_pub_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("/particles", 10);
 
         path_msg_.header.frame_id = "map";
 
@@ -49,10 +51,10 @@ namespace grid_fastslam
 
     void GridFastSlam::move_particles(double dr1, double dr2, double dt)
     {
-        const double alpha1 = 0.2;
-        const double alpha2 = 0.2;
-        const double alpha3 = 0.02;
-        const double alpha4 = 0.02;
+        const double alpha1 = 0.1;
+        const double alpha2 = 0.1;
+        const double alpha3 = 0.01;
+        const double alpha4 = 0.01;
 
         double sigma_rot1 = alpha1 * std::abs(dr1) + alpha2 * dt;
         double sigma_trans = alpha3 * dt + alpha4 * (std::abs(dr1) + std::abs(dr2));
@@ -103,7 +105,7 @@ namespace grid_fastslam
         // The "Line Drawing" Algorithm
         // This connects two grid cells with the pixels in between
         std::vector<std::pair<int, int>> cells;
-        cells.reserve(300);
+        cells.reserve(500);
 
         int di = std::abs(i1 - i0);
         int dj = std::abs(j1 - j0);
@@ -146,8 +148,8 @@ namespace grid_fastslam
         double angle = scan->angle_min;
 
         // Define Field of View Limits (-PI/2 to +PI/2)
-        const double angle_min_limit = -M_PI_2;
-        const double angle_max_limit = M_PI_2;
+        const double angle_min_limit = -M_PI_4;
+        const double angle_max_limit = M_PI_4;
 
         for (size_t i = 0; i < scan->ranges.size(); ++i)
         {
@@ -187,7 +189,6 @@ namespace grid_fastslam
     // =========================================================
 
     // Internal helper to calculate where laser points land in the world
-    // Optimization: Only process points within +/- 90 degrees (Front view)
     std::vector<std::pair<double, double>> GridFastSlam::get_scan_endpoints(
         const Particle &p,
         const sensor_msgs::msg::LaserScan::SharedPtr scan,
@@ -231,16 +232,15 @@ namespace grid_fastslam
         if (endpoints.empty())
             return;
 
-        int last_r = -1000;
-        int last_c = -1000;
-
         // 2. Get Robot's position in the grid
         auto [r0, c0] = world_to_grid(p.x, p.y);
+
+        // Sanity check: if robot is off-map, we can't raycast from it
         if (r0 < 0 || r0 >= MAP_HEIGHT || c0 < 0 || c0 >= MAP_WIDTH)
             return;
 
         // 3. Loop through rays
-        int beam_step = 1;
+        int beam_step = 1; 
 
         for (size_t k = 0; k < endpoints.size(); k += beam_step)
         {
@@ -251,36 +251,30 @@ namespace grid_fastslam
             if (r1 < 0 || r1 >= MAP_HEIGHT || c1 < 0 || c1 >= MAP_WIDTH)
                 continue;
 
-            if (r1 == last_r && c1 == last_c)
-            {
-                int idx_hit = r1 * MAP_WIDTH + c1;
-                p.grid[idx_hit] += L_OCC;
-                if (p.grid[idx_hit] > L_MAX)
-                    p.grid[idx_hit] = L_MAX;
-                continue;
-            }
-
-            last_r = r1;
-            last_c = c1;
-
-            // 4. Raycast (Bresenham)
+            // 4. Raycast (Bresenham) to update free space
             auto ray = bresenham(r0, c0, r1, c1);
 
+            // Iterate through the ray (excluding the last point, which is the hit)
             for (size_t j = 0; j < ray.size() - 1; ++j)
             {
                 int fr = ray[j].first;
                 int fc = ray[j].second;
+
+                // Boundary check for ray points (just in case bresenham goes slightly out)
                 if (fr >= 0 && fr < MAP_HEIGHT && fc >= 0 && fc < MAP_WIDTH)
                 {
                     int idx = fr * MAP_WIDTH + fc; // 2D -> 1D Index
                     p.grid[idx] += L_FREE;
+                    
                     if (p.grid[idx] < L_MIN)
                         p.grid[idx] = L_MIN; // Clamp
                 }
             }
 
+            // 5. Update the endpoint as occupied
             int idx_hit = r1 * MAP_WIDTH + c1;
             p.grid[idx_hit] += L_OCC;
+            
             if (p.grid[idx_hit] > L_MAX)
                 p.grid[idx_hit] = L_MAX; // Clamp
         }
@@ -392,10 +386,10 @@ namespace grid_fastslam
         {
             sum_sq += (p.weight * p.weight);
         }
-        double n_eff = 1.0 / (sum_sq + 1e-9);
+         double n_eff = 1.0 / (sum_sq + 1e-9);
 
-        // 2. Resample only if particles have degraded (N_eff < 50%)
-        if (n_eff < (num_particles_ * 0.5))
+        // 2. Resample only if particles have degraded
+        if (n_eff <= num_particles_ * 0.9)
         {
 
             std::vector<Particle> new_particles;
@@ -431,6 +425,7 @@ namespace grid_fastslam
 
     void GridFastSlam::scan_callback(const sensor_msgs::msg::LaserScan::SharedPtr msg)
     {
+        auto start_time = std::chrono::high_resolution_clock::now(); 
         // Initialize Lookup Table if needed
         init_lut(msg);
 
@@ -454,6 +449,15 @@ namespace grid_fastslam
 
         // 4. Publish Visualization
         publish_map_and_path();
+
+        auto end_time = std::chrono::high_resolution_clock::now();
+
+        // 3. Calcular la duración en milisegundos (puedes cambiar a microseconds si es muy rápido)
+        auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time).count();
+
+        // 4. Imprimir en consola (Usando el logger de ROS 2)
+        // Usamos RCLCPP_INFO_STREAM para facilidad, o RCLCPP_INFO con formato
+        RCLCPP_INFO(this->get_logger(), "Scan Callback tardó: %ld ms", duration);
     }
 
     void GridFastSlam::publish_map_and_path()
@@ -506,13 +510,46 @@ namespace grid_fastslam
         pose.pose.position.x = display_p.x;
         pose.pose.position.y = display_p.y;
 
+
         // Yaw to Quaternion (Simple Z-axis rotation)
         pose.pose.orientation.z = std::sin(display_p.yaw * 0.5);
         pose.pose.orientation.w = std::cos(display_p.yaw * 0.5);
 
         path_msg_.header.stamp = this->now();
         path_msg_.poses.push_back(pose);
+
+        pose_pub_->publish(pose);
         path_pub_->publish(path_msg_);
+
+        // --- Publish Particles as PointCloud2 ---
+        sensor_msgs::msg::PointCloud2 cloud_msg;
+        cloud_msg.header.stamp = this->now();
+        cloud_msg.header.frame_id = "map"; // Same frame as your grid
+        cloud_msg.height = 1; 
+        cloud_msg.width = particles_.size();
+
+        // Initialize the PointCloud fields (x, y, z)
+        sensor_msgs::PointCloud2Modifier modifier(cloud_msg);
+        modifier.setPointCloud2FieldsByString(1, "xyz");
+        modifier.resize(particles_.size());
+
+        // Create iterators to write data
+        sensor_msgs::PointCloud2Iterator<float> iter_x(cloud_msg, "x");
+        sensor_msgs::PointCloud2Iterator<float> iter_y(cloud_msg, "y");
+        sensor_msgs::PointCloud2Iterator<float> iter_z(cloud_msg, "z");
+
+        for (const auto &p : particles_)
+        {
+            *iter_x = p.x;
+            *iter_y = p.y;
+            *iter_z = 0.0; // Flat on the map
+
+            ++iter_x;
+            ++iter_y;
+            ++iter_z;
+        }
+
+        particles_pub_->publish(cloud_msg);
     }
 
 } // namespace grid_fastslam

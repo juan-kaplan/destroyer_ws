@@ -1,9 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target grid_fastslam_node[0m
-[ 33%] [32mBuilding CXX object CMakeFiles/grid_fastslam_node.dir/src/main.cpp.o[0m
-[ 66%] [32m[1mLinking CXX executable grid_fastslam_node[0m
-/usr/bin/ld: CMakeFiles/grid_fastslam_node.dir/src/grid_fastslam.cpp.o: in function `grid_fastslam::GridFastSlam::GridFastSlam()':
-grid_fastslam.cpp:(.text+0x58d): undefined reference to `grid_fastslam::GridFastSlam::scan_callback(std::shared_ptr<sensor_msgs::msg::LaserScan_<std::allocator<void> > >)'
-collect2: error: ld returned 1 exit status
-gmake[2]: *** [CMakeFiles/grid_fastslam_node.dir/build.make:237: grid_fastslam_node] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/grid_fastslam_node.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

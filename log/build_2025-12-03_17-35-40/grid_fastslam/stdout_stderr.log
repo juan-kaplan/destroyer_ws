@@ -1,0 +1,9 @@
+[35m[1mConsolidate compiler generated dependencies of target grid_fastslam_node[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/grid_fastslam_node.dir/src/grid_fastslam.cpp.o[0m
+[01m[K/home/admlinar/Documents/destroyer_ws/src/grid_fastslam/src/grid_fastslam.cpp:[m[K In member function ‘[01m[Kvoid grid_fastslam::GridFastSlam::update_grid(grid_fastslam::Particle&, sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/admlinar/Documents/destroyer_ws/src/grid_fastslam/src/grid_fastslam.cpp:266:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kidx[m[K’ was not declared in this scope
+  266 |                     if (p.grid[[01;31m[Kidx[m[K] > 2.0)
+      |                                [01;31m[K^~~[m[K
+gmake[2]: *** [CMakeFiles/grid_fastslam_node.dir/build.make:76: CMakeFiles/grid_fastslam_node.dir/src/grid_fastslam.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/grid_fastslam_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

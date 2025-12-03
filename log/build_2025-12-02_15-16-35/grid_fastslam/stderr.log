@@ -1,8 +1,0 @@
-[01m[K/home/alumno1/Documents/destroyer_ws/src/grid_fastslam/src/grid_fastslam.cpp:[m[K In member function ‘[01m[Kvoid grid_fastslam::GridFastSlam::publish_map_and_path()[m[K’:
-[01m[K/home/alumno1/Documents/destroyer_ws/src/grid_fastslam/src/grid_fastslam.cpp:508:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kbest_p[m[K’ was not declared in this scope; did you mean ‘[01m[Kbest_it[m[K’?
-  508 |         pose.pose.position.x = [01;31m[Kbest_p[m[K.x;
-      |                                [01;31m[K^~~~~~[m[K
-      |                                [32m[Kbest_it[m[K
-gmake[2]: *** [CMakeFiles/grid_fastslam_node.dir/build.make:76: CMakeFiles/grid_fastslam_node.dir/src/grid_fastslam.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/grid_fastslam_node.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2
