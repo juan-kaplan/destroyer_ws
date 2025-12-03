@@ -1,0 +1,47 @@
+running egg_info
+creating ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info
+writing ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/PKG-INFO
+writing dependency_links to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/dependency_links.txt
+writing entry points to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/entry_points.txt
+writing requirements to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/requires.txt
+writing top-level names to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/top_level.txt
+writing manifest file '../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/SOURCES.txt'
+reading manifest file '../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build
+creating /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build/lib
+creating /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate
+copying mappeate_y_ubicate/robot_functions.py -> /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate
+copying mappeate_y_ubicate/__init__.py -> /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate
+copying mappeate_y_ubicate/fastslam.py -> /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate
+copying mappeate_y_ubicate/delta_odom.py -> /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate
+running install
+running install_lib
+creating /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate
+copying /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate/robot_functions.py -> /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate
+copying /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate/__init__.py -> /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate
+copying /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate/fastslam.py -> /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate
+copying /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate/delta_odom.py -> /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate
+byte-compiling /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate/robot_functions.py to robot_functions.cpython-310.pyc
+byte-compiling /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate/fastslam.py to fastslam.cpython-310.pyc
+byte-compiling /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate/delta_odom.py to delta_odom.cpython-310.pyc
+running install_data
+creating /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/ament_index
+creating /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/ament_index/resource_index
+creating /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/ament_index/resource_index/packages
+copying resource/mappeate_y_ubicate -> /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/ament_index/resource_index/packages
+copying package.xml -> /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate
+creating /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/launch
+copying launch/launch_my_fastslam.launch.py -> /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/launch
+creating /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/rviz
+copying rviz/slam.rviz -> /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/rviz
+running install_egg_info
+Copying ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info to /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate-0.0.0-py3.10.egg-info
+running install_scripts
+Installing delta_odom script to /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/mappeate_y_ubicate
+Installing fastslam script to /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/mappeate_y_ubicate
+writing list of installed files to '/home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/install.log'

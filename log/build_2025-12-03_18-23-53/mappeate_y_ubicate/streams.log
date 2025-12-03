@@ -1,0 +1,49 @@
+[0.306s] Invoking command in '/home/alumno1/Documents/destroyer_ws/src/mappeate_y_ubicate': PYTHONPATH=/home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mappeate_y_ubicate build --build-base /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build install --record /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/install.log --single-version-externally-managed install_data
+[0.408s] running egg_info
+[0.408s] creating ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info
+[0.408s] writing ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/PKG-INFO
+[0.408s] writing dependency_links to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/dependency_links.txt
+[0.408s] writing entry points to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/entry_points.txt
+[0.408s] writing requirements to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/requires.txt
+[0.408s] writing top-level names to ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/top_level.txt
+[0.408s] writing manifest file '../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/SOURCES.txt'
+[0.409s] reading manifest file '../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/SOURCES.txt'
+[0.409s] adding license file 'LICENSE'
+[0.409s] writing manifest file '../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info/SOURCES.txt'
+[0.409s] running build
+[0.409s] running build_py
+[0.409s] creating /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build
+[0.409s] creating /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build/lib
+[0.409s] creating /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate
+[0.410s] copying mappeate_y_ubicate/robot_functions.py -> /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate
+[0.410s] copying mappeate_y_ubicate/__init__.py -> /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate
+[0.410s] copying mappeate_y_ubicate/fastslam.py -> /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate
+[0.410s] copying mappeate_y_ubicate/delta_odom.py -> /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate
+[0.410s] running install
+[0.410s] running install_lib
+[0.410s] creating /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate
+[0.410s] copying /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate/robot_functions.py -> /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate
+[0.410s] copying /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate/__init__.py -> /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate
+[0.410s] copying /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate/fastslam.py -> /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate
+[0.410s] copying /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build/lib/mappeate_y_ubicate/delta_odom.py -> /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate
+[0.410s] byte-compiling /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate/robot_functions.py to robot_functions.cpython-310.pyc
+[0.411s] byte-compiling /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate/__init__.py to __init__.cpython-310.pyc
+[0.411s] byte-compiling /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate/fastslam.py to fastslam.cpython-310.pyc
+[0.412s] byte-compiling /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate/delta_odom.py to delta_odom.cpython-310.pyc
+[0.412s] running install_data
+[0.412s] creating /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/ament_index
+[0.412s] creating /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/ament_index/resource_index
+[0.412s] creating /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/ament_index/resource_index/packages
+[0.412s] copying resource/mappeate_y_ubicate -> /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/ament_index/resource_index/packages
+[0.412s] copying package.xml -> /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate
+[0.412s] creating /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/launch
+[0.412s] copying launch/launch_my_fastslam.launch.py -> /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/launch
+[0.412s] creating /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/rviz
+[0.412s] copying rviz/slam.rviz -> /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/share/mappeate_y_ubicate/rviz
+[0.413s] running install_egg_info
+[0.413s] Copying ../../build/mappeate_y_ubicate/mappeate_y_ubicate.egg-info to /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages/mappeate_y_ubicate-0.0.0-py3.10.egg-info
+[0.413s] running install_scripts
+[0.422s] Installing delta_odom script to /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/mappeate_y_ubicate
+[0.422s] Installing fastslam script to /home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/mappeate_y_ubicate
+[0.422s] writing list of installed files to '/home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/install.log'
+[0.433s] Invoked command in '/home/alumno1/Documents/destroyer_ws/src/mappeate_y_ubicate' returned '0': PYTHONPATH=/home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/alumno1/Documents/destroyer_ws/install/mappeate_y_ubicate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mappeate_y_ubicate build --build-base /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/build install --record /home/alumno1/Documents/destroyer_ws/build/mappeate_y_ubicate/install.log --single-version-externally-managed install_data

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/admlinar/Documents/destroyer_ws/src/grid_fastslam
+CMAKE_SOURCE_DIR = /home/alumno1/Documents/destroyer_ws/src/grid_fastslam
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/admlinar/Documents/destroyer_ws/build/grid_fastslam
+CMAKE_BINARY_DIR = /home/alumno1/Documents/destroyer_ws/build/grid_fastslam
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/admlinar/Documents/destroyer_ws/build/grid_fastslam && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/admlinar/Documents/destroyer_ws/src/grid_fastslam /home/admlinar/Documents/destroyer_ws/src/grid_fastslam /home/admlinar/Documents/destroyer_ws/build/grid_fastslam /home/admlinar/Documents/destroyer_ws/build/grid_fastslam /home/admlinar/Documents/destroyer_ws/build/grid_fastslam/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/alumno1/Documents/destroyer_ws/build/grid_fastslam && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alumno1/Documents/destroyer_ws/src/grid_fastslam /home/alumno1/Documents/destroyer_ws/src/grid_fastslam /home/alumno1/Documents/destroyer_ws/build/grid_fastslam /home/alumno1/Documents/destroyer_ws/build/grid_fastslam /home/alumno1/Documents/destroyer_ws/build/grid_fastslam/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

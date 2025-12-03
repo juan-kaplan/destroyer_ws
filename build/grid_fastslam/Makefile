@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/admlinar/Documents/destroyer_ws/src/grid_fastslam
+CMAKE_SOURCE_DIR = /home/alumno1/Documents/destroyer_ws/src/grid_fastslam
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/admlinar/Documents/destroyer_ws/build/grid_fastslam
+CMAKE_BINARY_DIR = /home/alumno1/Documents/destroyer_ws/build/grid_fastslam
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/admlinar/Documents/destroyer_ws/build/grid_fastslam/CMakeFiles /home/admlinar/Documents/destroyer_ws/build/grid_fastslam//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alumno1/Documents/destroyer_ws/build/grid_fastslam/CMakeFiles /home/alumno1/Documents/destroyer_ws/build/grid_fastslam//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/admlinar/Documents/destroyer_ws/build/grid_fastslam/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alumno1/Documents/destroyer_ws/build/grid_fastslam/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

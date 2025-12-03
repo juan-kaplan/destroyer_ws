@@ -1,0 +1,109 @@
+[0.127s] Invoking command in '/home/alumno1/Documents/destroyer_ws/build/turtlebot3_custom_simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alumno1/turtlebot3_ws/install/turtlebot3_teleop:/home/alumno1/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake /home/alumno1/Documents/destroyer_ws/src/turtlebot3_custom_simulation -DCMAKE_INSTALL_PREFIX=/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation
+[0.157s] -- The C compiler identification is GNU 11.4.0
+[0.189s] -- The CXX compiler identification is GNU 11.4.0
+[0.192s] -- Detecting C compiler ABI info
+[0.232s] -- Detecting C compiler ABI info - done
+[0.235s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.235s] -- Detecting C compile features
+[0.235s] -- Detecting C compile features - done
+[0.237s] -- Detecting CXX compiler ABI info
+[0.279s] -- Detecting CXX compiler ABI info - done
+[0.283s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.283s] -- Detecting CXX compile features
+[0.283s] -- Detecting CXX compile features - done
+[0.284s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.361s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.410s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.431s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.433s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.437s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.443s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.452s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.471s] -- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.480s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[0.508s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.510s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.567s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.581s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.604s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.610s] -- Looking for pthread.h
+[0.651s] -- Looking for pthread.h - found
+[0.651s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.690s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.691s] -- Found Threads: TRUE  
+[0.715s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.726s] -- Found tf2: 0.25.12 (/opt/ros/humble/share/tf2/cmake)
+[0.732s] -- Found tf2_msgs: 0.25.12 (/opt/ros/humble/share/tf2_msgs/cmake)
+[0.757s] -- Found turtlebot3_msgs: 2.3.0 (/home/alumno1/turtlebot3_ws/install/turtlebot3_msgs/share/turtlebot3_msgs/cmake)
+[0.803s] -- Configuring done
+[0.808s] -- Generating done
+[0.810s] -- Build files have been written to: /home/alumno1/Documents/destroyer_ws/build/turtlebot3_custom_simulation
+[0.815s] Invoked command in '/home/alumno1/Documents/destroyer_ws/build/turtlebot3_custom_simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alumno1/turtlebot3_ws/install/turtlebot3_teleop:/home/alumno1/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake /home/alumno1/Documents/destroyer_ws/src/turtlebot3_custom_simulation -DCMAKE_INSTALL_PREFIX=/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation
+[0.817s] Invoking command in '/home/alumno1/Documents/destroyer_ws/build/turtlebot3_custom_simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alumno1/turtlebot3_ws/install/turtlebot3_teleop:/home/alumno1/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/alumno1/Documents/destroyer_ws/build/turtlebot3_custom_simulation -- -j28 -l28
+[0.846s] [ 50%] [32mBuilding CXX object CMakeFiles/turtlebot3_custom_simulation.dir/src/turtlebot3_custom_simulation.cpp.o[0m
+[4.742s] [100%] [32m[1mLinking CXX executable turtlebot3_custom_simulation[0m
+[4.976s] [100%] Built target turtlebot3_custom_simulation
+[4.984s] Invoked command in '/home/alumno1/Documents/destroyer_ws/build/turtlebot3_custom_simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alumno1/turtlebot3_ws/install/turtlebot3_teleop:/home/alumno1/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/alumno1/Documents/destroyer_ws/build/turtlebot3_custom_simulation -- -j28 -l28
+[4.985s] Invoking command in '/home/alumno1/Documents/destroyer_ws/build/turtlebot3_custom_simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alumno1/turtlebot3_ws/install/turtlebot3_teleop:/home/alumno1/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/alumno1/Documents/destroyer_ws/build/turtlebot3_custom_simulation
+[4.991s] -- Install configuration: ""
+[4.991s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/lib/turtlebot3_custom_simulation/turtlebot3_custom_simulation
+[4.993s] -- Set runtime path of "/home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/lib/turtlebot3_custom_simulation/turtlebot3_custom_simulation" to ""
+[4.993s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/launch
+[4.994s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/launch/custom_casa.launch.py
+[4.994s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/launch/custom_casa_obs.launch.py
+[4.994s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/launch/custom_room.launch.py
+[4.994s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/launch/custom_maze.launch.py
+[4.994s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/launch/custom_simulation.launch.py
+[4.994s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/launch/custom_casa_obs2.launch.py
+[4.994s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/param
+[4.994s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/param/burger.yaml
+[4.994s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds
+[4.994s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/maze.world
+[4.994s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Suitcase1
+[4.994s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Suitcase1/model.sdf
+[4.994s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Suitcase1/model.config
+[4.994s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/casa_obs2.world
+[4.994s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/room.world
+[4.994s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Suitcase2H
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Suitcase2H/model.sdf
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Suitcase2H/model.config
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/HospitalBot
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/HospitalBot/model.sdf
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/HospitalBot/model.config
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/casa_obs.world
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Armchair
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Armchair/model.sdf
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Armchair/model.config
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/map
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/map/map.yaml
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/map/map.pgm
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/casa.world
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Sofa
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Sofa/model.sdf
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Sofa/model.config
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/slippery.world
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Walls
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Walls/model.sdf
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/Walls/model.config
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/worlds/casa_o.world
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/include/
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/include//turtlebot3_custom_simulation
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/include//turtlebot3_custom_simulation/turtlebot3_custom_simulation.hpp
+[4.995s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/ament_index/resource_index/package_run_dependencies/turtlebot3_custom_simulation
+[4.996s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/ament_index/resource_index/parent_prefix_path/turtlebot3_custom_simulation
+[4.996s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/environment/ament_prefix_path.sh
+[4.996s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/environment/ament_prefix_path.dsv
+[4.996s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/environment/path.sh
+[4.996s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/environment/path.dsv
+[4.996s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/local_setup.bash
+[4.996s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/local_setup.sh
+[4.996s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/local_setup.zsh
+[4.996s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/local_setup.dsv
+[4.996s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.dsv
+[4.996s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/ament_index/resource_index/packages/turtlebot3_custom_simulation
+[4.996s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.996s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.996s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/cmake/turtlebot3_custom_simulationConfig.cmake
+[4.996s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/cmake/turtlebot3_custom_simulationConfig-version.cmake
+[4.996s] -- Installing: /home/alumno1/Documents/destroyer_ws/install/turtlebot3_custom_simulation/share/turtlebot3_custom_simulation/package.xml
+[4.997s] Invoked command in '/home/alumno1/Documents/destroyer_ws/build/turtlebot3_custom_simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alumno1/turtlebot3_ws/install/turtlebot3_teleop:/home/alumno1/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/alumno1/Documents/destroyer_ws/build/turtlebot3_custom_simulation

@@ -17,16 +17,15 @@
 #include "sensor_msgs/msg/point_cloud2.hpp"
 #include "sensor_msgs/point_cloud2_iterator.hpp"
 
-
 namespace grid_fastslam
 {
 
     // ==========================================
     // 1. CONSTANTS (From robot_functions.py)
     // ==========================================
-    constexpr int MAP_HEIGHT = 100;
-    constexpr int MAP_WIDTH = 100;
-    constexpr double RESOLUTION = 0.1;
+    constexpr int MAP_HEIGHT = 400;
+    constexpr int MAP_WIDTH = 400;
+    constexpr double RESOLUTION = 0.05;
     constexpr double OX = -(MAP_WIDTH * RESOLUTION) / 2.0;
     constexpr double OY = -(MAP_HEIGHT * RESOLUTION) / 2.0;
 

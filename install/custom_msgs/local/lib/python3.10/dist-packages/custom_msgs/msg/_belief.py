@@ -121,7 +121,7 @@ class Belief(metaclass=Metaclass_Belief):
             return False
         if self.mu != other.mu:
             return False
-        if any(self.covariance != other.covariance):
+        if all(self.covariance != other.covariance):
             return False
         return True
 

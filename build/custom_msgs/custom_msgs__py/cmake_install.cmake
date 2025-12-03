@@ -1,8 +1,8 @@
-# Install script for directory: /home/admlinar/Documents/destroyer_ws/build/custom_msgs/custom_msgs__py
+# Install script for directory: /home/alumno1/Documents/destroyer_ws/build/custom_msgs/custom_msgs__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/admlinar/Documents/destroyer_ws/install/custom_msgs")
+  set(CMAKE_INSTALL_PREFIX "/home/alumno1/Documents/destroyer_ws/install/custom_msgs")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
