@@ -26,6 +26,7 @@ namespace grid_fastslam
             std::bind(&GridFastSlam::scan_callback, this, std::placeholders::_1));
 
         map_pub_ = this->create_publisher<nav_msgs::msg::OccupancyGrid>("/map", map_qos);
+        best_map_pub_ = this->create_publisher<nav_msgs::msg::OccupancyGrid>("/best_map");
         path_pub_ = this->create_publisher<nav_msgs::msg::Path>("/particle_robot_path", 10);
         pose_pub_ = this->create_publisher<geometry_msgs::msg::PoseStamped>("/particle_pose", 10);
         particles_pub_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("/particles", 10);
@@ -87,14 +88,9 @@ namespace grid_fastslam
         return angle;
     }
 
-    // =========================================================
-    // HELPER FUNCTIONS (COORDINATES & RAYCASTING)
-    // =========================================================
-
     std::pair<int, int> GridFastSlam::world_to_grid(double x, double y)
     {
         // Convert World (meters) to Map (indices)
-        // Python: j = floor((x - ox) / res), i = floor((y - oy) / res)
         int j = std::floor((x - OX) / RESOLUTION); // x is column (width)
         int i = std::floor((y - OY) / RESOLUTION); // y is row (height)
         return {i, j};
@@ -102,8 +98,6 @@ namespace grid_fastslam
 
     std::vector<std::pair<int, int>> GridFastSlam::bresenham(int i0, int j0, int i1, int j1)
     {
-        // The "Line Drawing" Algorithm
-        // This connects two grid cells with the pixels in between
         std::vector<std::pair<int, int>> cells;
         cells.reserve(500);
 
@@ -138,7 +132,6 @@ namespace grid_fastslam
 
     void GridFastSlam::init_lut(const sensor_msgs::msg::LaserScan::SharedPtr scan)
     {
-        // Only calculate if the table is empty or size changed
         if (scan_lut_.size() == scan->ranges.size())
             return;
 
@@ -147,7 +140,7 @@ namespace grid_fastslam
 
         double angle = scan->angle_min;
 
-        // Define Field of View Limits (-PI/2 to +PI/2)
+        // Define Field of View Limits
         const double angle_min_limit = -M_PI_4;
         const double angle_max_limit = M_PI_4;
 
@@ -155,7 +148,7 @@ namespace grid_fastslam
         {
             RayLUT entry;
 
-            // 1. Normalize Angle (The heavy "while" loop logic)
+            // 1. Normalize Angle
             double angle_wrapped = angle;
             while (angle_wrapped > M_PI)
                 angle_wrapped -= 2.0 * M_PI;
@@ -163,7 +156,7 @@ namespace grid_fastslam
                 angle_wrapped += 2.0 * M_PI;
 
             // 2. Pre-calculate Trigonometry
-            entry.cos_a = std::cos(angle); // Note: cos(angle) == cos(wrapped)
+            entry.cos_a = std::cos(angle);
             entry.sin_a = std::sin(angle);
 
             // 3. Pre-calculate FOV check
@@ -184,11 +177,6 @@ namespace grid_fastslam
         RCLCPP_INFO(this->get_logger(), "LUT Initialized with %zu rays.", scan_lut_.size());
     }
 
-    // =========================================================
-    // GRID UPDATE LOGIC
-    // =========================================================
-
-    // Internal helper to calculate where laser points land in the world
     std::vector<std::pair<double, double>> GridFastSlam::get_scan_endpoints(
         const Particle &p,
         const sensor_msgs::msg::LaserScan::SharedPtr scan,
@@ -234,8 +222,6 @@ namespace grid_fastslam
 
         // 2. Get Robot's position in the grid
         auto [r0, c0] = world_to_grid(p.x, p.y);
-
-        // Sanity check: if robot is off-map, we can't raycast from it
         if (r0 < 0 || r0 >= MAP_HEIGHT || c0 < 0 || c0 >= MAP_WIDTH)
             return;
 
@@ -246,21 +232,17 @@ namespace grid_fastslam
         {
             auto [wx, wy] = endpoints[k];
             auto [r1, c1] = world_to_grid(wx, wy);
-
-            // Check if endpoint is inside map
             if (r1 < 0 || r1 >= MAP_HEIGHT || c1 < 0 || c1 >= MAP_WIDTH)
                 continue;
 
             // 4. Raycast (Bresenham) to update free space
             auto ray = bresenham(r0, c0, r1, c1);
 
-            // Iterate through the ray (excluding the last point, which is the hit)
             for (size_t j = 0; j < ray.size() - 1; ++j)
             {
                 int fr = ray[j].first;
                 int fc = ray[j].second;
 
-                // Boundary check for ray points (just in case bresenham goes slightly out)
                 if (fr >= 0 && fr < MAP_HEIGHT && fc >= 0 && fc < MAP_WIDTH)
                 {
                     int idx = fr * MAP_WIDTH + fc; // 2D -> 1D Index
@@ -280,12 +262,6 @@ namespace grid_fastslam
         }
     }
 
-    // =========================================================
-    // PROBABILITY & RESAMPLING LOGIC
-    // =========================================================
-
-    // Helper: Numerical stability for normalizing weights
-    // Computes log(sum(exp(x_i))) without overflowing
     double log_sum_exp(const std::vector<double> &log_weights)
     {
         if (log_weights.empty())
@@ -317,8 +293,6 @@ namespace grid_fastslam
 
             // Get valid scan points in World Frame
             auto endpoints = get_scan_endpoints(p, scan, scan_lut_, false);
-
-            // If no valid points, this particle is dead
             if (endpoints.empty())
             {
                 log_weights[i] = -1.0e9;
@@ -328,12 +302,9 @@ namespace grid_fastslam
             double log_w_sum = 0.0;
             int hit_count = 0;
 
-            // Compare scan to the particle's OWN map
             for (const auto &pt : endpoints)
             {
                 auto [r, c] = world_to_grid(pt.first, pt.second);
-
-                // Check if point is inside the map
                 if (r >= 0 && r < MAP_HEIGHT && c >= 0 && c < MAP_WIDTH)
                 {
                     float log_odds = p.grid[r * MAP_WIDTH + c];
@@ -362,7 +333,7 @@ namespace grid_fastslam
             }
         }
 
-        // 2. Normalize Weights (LogSumExp Trick)
+        // 2. Normalize Weights 
         if (!any_valid_weight)
         {
             for (auto &p : particles_)
@@ -426,16 +397,11 @@ namespace grid_fastslam
     void GridFastSlam::scan_callback(const sensor_msgs::msg::LaserScan::SharedPtr msg)
     {
         auto start_time = std::chrono::high_resolution_clock::now(); 
-        // Initialize Lookup Table if needed
         init_lut(msg);
 
-        // 1. Update Weights based on how well scan matches map
         update_particles(msg);
 
-        // 2. Resample (Evolution) - Kill bad particles, multiply good ones
         resample();
-
-        // 3. Update Maps (Grid) for each particle
         map_update_counter++;
         if (map_update_counter >= map_update_interval)
         {
@@ -447,16 +413,10 @@ namespace grid_fastslam
             map_update_counter = 0;
         }
 
-        // 4. Publish Visualization
         publish_map_and_path();
 
         auto end_time = std::chrono::high_resolution_clock::now();
-
-        // 3. Calcular la duración en milisegundos (puedes cambiar a microseconds si es muy rápido)
         auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time).count();
-
-        // 4. Imprimir en consola (Usando el logger de ROS 2)
-        // Usamos RCLCPP_INFO_STREAM para facilidad, o RCLCPP_INFO con formato
         RCLCPP_INFO(this->get_logger(), "Scan Callback tardó: %ld ms", duration);
     }
 
@@ -498,11 +458,31 @@ namespace grid_fastslam
         // Convert Log-Odds to Int8 [0-100] for RViz
         for (size_t i = 0; i < display_p.grid.size(); ++i)
         {
-            // Probability p = 1 / (1 + exp(-l))
+            // Probability p = 1.0 / (1.0 + exp(-l))
             double p = 1.0 / (1.0 + std::exp(-display_p.grid[i]));
             map_msg.data[i] = static_cast<int8_t>(p * 100);
         }
         map_pub_->publish(map_msg);
+
+        // --- Publish Best Map ---
+        nav_msgs::msg::OccupancyGrid best_map_msg;
+        best_map_msg.header.stamp = this->now();
+        best_map_msg.header.frame_id = "map";
+        best_map_msg.info.resolution = RESOLUTION;
+        best_map_msg.info.width = MAP_WIDTH;
+        best_map_msg.info.height = MAP_HEIGHT;
+        best_map_msg.info.origin.position.x = OX;
+        best_map_msg.info.origin.position.y = OY;
+        best_map_msg.info.origin.orientation.w = 1.0;
+        best_map_msg.data.resize(MAP_WIDTH * MAP_HEIGHT);
+
+        const auto& best_p = particles_[actual_best_index];
+        for (size_t i = 0; i < best_p.grid.size(); ++i)
+        {
+            double p = 1.0 / (1.0 + std::exp(-best_p.grid[i]));
+            best_map_msg.data[i] = static_cast<int8_t>(p * 100);
+        }
+        best_map_pub_->publish(best_map_msg);
 
         // --- Publish Path ---
         geometry_msgs::msg::PoseStamped pose;

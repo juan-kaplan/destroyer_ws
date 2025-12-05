@@ -4,6 +4,7 @@ from nav_msgs.msg import OccupancyGrid
 import numpy as np
 import os
 import yaml
+import cv2
 
 
 class MapSaver(Node):
@@ -23,49 +24,32 @@ class MapSaver(Node):
     def save_map_callback(self, msg):
         self.get_logger().info("Received map! Saving...")
 
-        # 1. Save Image (.pgm)
-        self.save_pgm(msg)
-
-        # 2. Save Metadata (.yaml)
+        self.save_png(msg)
         self.save_yaml(msg)
-
         self.get_logger().info(
-            f"Map saved successfully to {self.map_name}.pgm and .yaml"
+            f"Map saved successfully to {self.map_name}.png and .yaml"
         )
-
-        # 3. Shutdown self after saving once
         rclpy.shutdown()
 
-    def save_pgm(self, msg):
+    def save_png(self, msg):
         width = msg.info.width
         height = msg.info.height
 
-        # Convert ROS Data (-1, 0..100) to PGM Data (0..255)
-        # ROS: -1 = Unknown, 0 = Free, 100 = Occupied
-        # PGM: 205= Unknown, 254= Free, 0   = Occupied (Black)
-
         data = np.array(msg.data).reshape((height, width))
-
-        # Flip Y (ROS origin is bottom-left, Image origin is top-left)
         data = np.flipud(data)
+        img = np.full((height, width, 3), 205, dtype=np.uint8)
 
-        # Create image array
-        pgm_data = np.zeros((height, width), dtype=np.uint8)
+        known_mask = data >= 0
+        img[known_mask] = 255 - (data[known_mask] * 255 / 100)
 
-        # Map values
-        pgm_data.fill(205)  # Default Unknown (Gray)
-        pgm_data[data == 0] = 254  # Free (White-ish)
-        pgm_data[data == 100] = 0  # Occupied (Black)
+        img = img.astype(np.uint8)
 
-        header = f"P5\n{width} {height}\n255\n"
-
-        with open(f"{self.map_name}.pgm", "wb") as f:
-            f.write(header.encode("ascii"))
-            f.write(pgm_data.tobytes())
+        cv2.imwrite(f"{self.map_name}.png", img)
 
     def save_yaml(self, msg):
         yaml_data = {
-            "image": f"{self.map_name}.pgm",
+            "image": f"{self.map_name}.png",
+            "mode": "scale",
             "resolution": msg.info.resolution,
             "origin": [
                 msg.info.origin.position.x,
