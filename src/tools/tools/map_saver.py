@@ -48,7 +48,7 @@ class MapSaver(Node):
         kernel = np.ones((kernel_size, kernel_size), np.uint8)
         img = cv2.erode(img, kernel, iterations=1)
 
-        cv2.imwrite(f"{self.map_name}.png", img)
+        cv2.imwrite(f"src/state_machine/maps/{self.map_name}.png", img)
 
     def save_yaml(self, msg):
         yaml_data = {

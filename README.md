@@ -43,7 +43,7 @@ ros2 run turtlebot3_teleop teleop_keyboard
 Once you are satisfied with the map, save it. The map saver node will save the map to the `src/state_machine/maps` directory.
 ```bash
 source install/setup.bash
-ros2 run tools map_saver --ros-args -p map_name:=src/state_machine/maps/my_map
+ros2 run tools map_saver --ros-args -p map_name:=my_map
 ```
 
 ---
