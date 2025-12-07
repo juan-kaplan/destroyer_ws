@@ -16,17 +16,17 @@ class State(Enum):
     OBSTACLE = auto()
 
 class PursuitConfig:
-        LOOKAHEAD_DIST = 0.2
+        LOOKAHEAD_DIST = 0.15
         GOAL_TOLERANCE = 0.05
         LINEAR_VEL = 0.05
         ROTATION_SPEED = 0.5
-        HEADING_TOLERANCE = 0.3
+        HEADING_TOLERANCE = 0.4
         MAX_ANGULAR_VEL = 1.5
         GOAL_ANGLE_TOLERANCE = 0.1
-        OBSTACLE_DETECT_DIST = 0.4
-        OBSTACLE_MAP_DIST = 2.0
-        SCAN_ANGLE_WIDTH = math.pi / 8
-        INFLATION_RADIUS = 1
+        OBSTACLE_DETECT_DIST = 0.5
+        OBSTACLE_MAP_DIST = 0.6
+        SCAN_ANGLE_WIDTH = math.pi / 6
+        INFLATION_RADIUS = 3
         OBSTACLE_SIGMA = 0.3
 
 class Navigator(Node):
@@ -411,12 +411,41 @@ class Navigator(Node):
         if self.front_scan is None or len(self.front_scan['ranges']) == 0:
             return False
 
-        min_dist = np.min(self.front_scan['ranges'])
+        ranges = self.front_scan['ranges']
+        angles = self.front_scan['angles']
+
+        danger_mask = ranges < self.cfg.OBSTACLE_DETECT_DIST
+        if not np.any(danger_mask):
+            return False
         
-        if min_dist < self.cfg.OBSTACLE_DETECT_DIST:
-            self.get_logger().info(f"PURSUIT: Obstacle detected at {min_dist:.2f}m")
+        ranges = ranges[danger_mask]
+        angles = angles[danger_mask]
+
+        rx, ry, ryaw = self.get_robot_state()
+        
+        local_x = ranges * np.cos(angles)
+        local_y = ranges * np.sin(angles)
+        
+        world_x = rx + (local_x * np.cos(ryaw) - local_y * np.sin(ryaw))
+        world_y = ry + (local_x * np.sin(ryaw) + local_y * np.cos(ryaw))
+
+        unknown_obstacles_count = 0
+
+        for wx, wy in zip(world_x, world_y):
+            gx, gy = self.world_to_grid((wx, wy))
+            
+            # Check bounds
+            if not (0 <= gx < self.map_info.width and 0 <= gy < self.map_info.height):
+                continue
+
+            current_cost = self.get_cost(gx, gy)
+            if current_cost < 50:
+                unknown_obstacles_count += 1
+
+        if unknown_obstacles_count > 3:
+            self.get_logger().info(f"COLLISION RISK! Detected {unknown_obstacles_count} unmapped points.")
             return True
-        
+
         return False
 
     def get_robot_state(self):

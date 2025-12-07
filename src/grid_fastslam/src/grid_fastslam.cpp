@@ -215,17 +215,20 @@ namespace grid_fastslam
 
     void GridFastSlam::update_grid(Particle &p, const sensor_msgs::msg::LaserScan::SharedPtr scan)
     {
-        // 1. Get where the laser hits are in the real world
         auto endpoints = get_scan_endpoints(p, scan, scan_lut_, true);
         if (endpoints.empty())
             return;
 
-        // 2. Get Robot's position in the grid
         auto [r0, c0] = world_to_grid(p.x, p.y);
         if (r0 < 0 || r0 >= MAP_HEIGHT || c0 < 0 || c0 >= MAP_WIDTH)
             return;
 
-        // 3. Loop through rays
+        std::vector<int> free_cells;
+        std::vector<int> occ_cells;
+
+        free_cells.reserve(endpoints.size() * 50); 
+        occ_cells.reserve(endpoints.size());
+
         int beam_step = 1;
 
         for (size_t k = 0; k < endpoints.size(); k += beam_step)
@@ -235,7 +238,6 @@ namespace grid_fastslam
             if (r1 < 0 || r1 >= MAP_HEIGHT || c1 < 0 || c1 >= MAP_WIDTH)
                 continue;
 
-            // 4. Raycast (Bresenham) to update free space
             auto ray = bresenham(r0, c0, r1, c1);
 
             for (size_t j = 0; j < ray.size() - 1; ++j)
@@ -245,20 +247,37 @@ namespace grid_fastslam
 
                 if (fr >= 0 && fr < MAP_HEIGHT && fc >= 0 && fc < MAP_WIDTH)
                 {
-                    int idx = fr * MAP_WIDTH + fc; // 2D -> 1D Index
-                    p.grid[idx] += L_FREE;
-
-                    if (p.grid[idx] < L_MIN)
-                        p.grid[idx] = L_MIN; // Clamp
+                    free_cells.push_back(fr * MAP_WIDTH + fc);
                 }
             }
 
-            // 5. Update the endpoint as occupied
-            int idx_hit = r1 * MAP_WIDTH + c1;
-            p.grid[idx_hit] += L_OCC;
+            occ_cells.push_back(r1 * MAP_WIDTH + c1);
+        }
 
-            if (p.grid[idx_hit] > L_MAX)
-                p.grid[idx_hit] = L_MAX; // Clamp
+        std::sort(free_cells.begin(), free_cells.end());
+        free_cells.erase(std::unique(free_cells.begin(), free_cells.end()), free_cells.end());
+
+        std::sort(occ_cells.begin(), occ_cells.end());
+        occ_cells.erase(std::unique(occ_cells.begin(), occ_cells.end()), occ_cells.end());
+
+        auto occ_it = occ_cells.begin();
+        for (int idx : free_cells)
+        {
+            // Skip if this index is also in occ_cells (Occupied wins)
+            while (occ_it != occ_cells.end() && *occ_it < idx) {
+                occ_it++;
+            }
+            if (occ_it != occ_cells.end() && *occ_it == idx) {
+                continue; // Conflict: This cell is occupied, don't mark as free
+            }
+            p.grid[idx] += L_FREE;
+            if (p.grid[idx] < L_MIN) p.grid[idx] = L_MIN;
+        }
+
+        for (int idx : occ_cells)
+        {
+            p.grid[idx] += L_OCC;
+            if (p.grid[idx] > L_MAX) p.grid[idx] = L_MAX;
         }
     }
 
