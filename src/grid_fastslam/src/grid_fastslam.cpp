@@ -52,10 +52,10 @@ namespace grid_fastslam
 
     void GridFastSlam::move_particles(double dr1, double dr2, double dt)
     {
-        const double alpha1 = 0.05;
-        const double alpha2 = 0.05;
-        const double alpha3 = 0.1;
-        const double alpha4 = 0.05;
+        const double alpha1 = 0.2;
+        const double alpha2 = 0.2;
+        const double alpha3 = 0.02;
+        const double alpha4 = 0.02;
 
         double sigma_rot1 = alpha1 * std::abs(dr1) + alpha2 * dt;
         double sigma_trans = alpha3 * dt + alpha4 * (std::abs(dr1) + std::abs(dr2));
