@@ -12,6 +12,10 @@ namespace grid_fastslam
         num_particles_ = this->get_parameter("num_particles").as_int();
 
         particles_.resize(num_particles_);
+        double initial_weight = 1.0 / num_particles_;
+        for (auto &p : particles_) {
+            p.weight = initial_weight;
+        }
 
         rclcpp::QoS map_qos(rclcpp::KeepLast(1));
         map_qos.reliable();
@@ -52,10 +56,10 @@ namespace grid_fastslam
 
     void GridFastSlam::move_particles(double dr1, double dr2, double dt)
     {
-        const double alpha1 = 0.2;
-        const double alpha2 = 0.2;
-        const double alpha3 = 0.02;
-        const double alpha4 = 0.02;
+        const double alpha1 = 0.05;
+        const double alpha2 = 0.05;
+        const double alpha3 = 0.1;
+        const double alpha4 = 0.05;
 
         double sigma_rot1 = alpha1 * std::abs(dr1) + alpha2 * dt;
         double sigma_trans = alpha3 * dt + alpha4 * (std::abs(dr1) + std::abs(dr2));
@@ -308,7 +312,7 @@ namespace grid_fastslam
 #pragma omp parallel for
         for (int i = 0; i < num_particles_; ++i)
         {
-            const auto &p = particles_[i];
+            Particle &p = particles_[i];
 
             // Get valid scan points in World Frame
             auto endpoints = get_scan_endpoints(p, scan, scan_lut_, false);
@@ -320,86 +324,49 @@ namespace grid_fastslam
                 continue;
             }
 
-            double log_w_sum = 0.0;
-            int hit_count = 0;
+            double scan_score = 0.0;
+            int step = 10;
 
-            for (const auto &pt : endpoints)
+            for (size_t k = 0; k < endpoints.size(); k += step)
             {
+                const auto &pt = endpoints[k];
                 auto [r, c] = world_to_grid(pt.first, pt.second);
 
-                double best_prob_in_kernel = 0.0;
-                bool found_valid_neighbor = false;
+                double best_val_in_kernel = -5.0;
+                int search_radius = 0;
 
-                for (int dr = -1; dr <= 1; ++dr)
+                for (int dr = -search_radius; dr <= search_radius; ++dr)
                 {
-                    for (int dc = -1; dc <= 1; ++dc)
+                    for (int dc = -search_radius; dc <= search_radius; ++dc)
                     {
                         int nr = r + dr;
                         int nc = c + dc;
 
                         if (nr >= 0 && nr < MAP_HEIGHT && nc >= 0 && nc < MAP_WIDTH)
                         {
-                            double log_odds = p.grid[nr * MAP_WIDTH + nc];
-                            double prob = 1.0 / (1.0 + std::exp(-log_odds));
-                            
-                            if (prob > best_prob_in_kernel)
-                            {
-                                best_prob_in_kernel = prob;
-                                found_valid_neighbor = true;
+                            double val = p.grid[nr * MAP_WIDTH + nc];
+                            if (val > best_val_in_kernel) {
+                                best_val_in_kernel = val;
                             }
                         }
                     }
                 }
 
-                if (found_valid_neighbor)
-                {
-                    best_prob_in_kernel = std::max(1e-6, std::min(best_prob_in_kernel, 1.0 - 1e-6));
-                    log_w_sum += std::log(best_prob_in_kernel);
-                    hit_count++;
-                }
-            }
-
-            if (hit_count > 0)
-            {
-                // 1. Current Measurement Likelihood
-                double current_log_likelihood = log_w_sum;
-
-                // 2. Retrieve Previous Weight (Prior)
-                // Safety: Add epsilon to avoid log(0) if weight was effectively zero
-                double prev_log_weight = std::log(p.weight + 1e-300);
-
-                // 3. Bayesian Update: Log(Posterior) = Log(Prior) + Log(Likelihood)
-                log_weights[i] = prev_log_weight + current_log_likelihood;
-            }
-            else
-            {
-                log_weights[i] = -1.0e9;
-            }
+                scan_score += best_val_in_kernel;
+            }    
+            
+            double prev_log_weight = std::log(p.weight + 1e-300);
+            log_weights[i] = prev_log_weight + scan_score;
         }
 
-        // --- Normalization Logic (Unchanged) ---
-        bool any_valid_weight = false;
-        for (double w : log_weights)
-        {
-            if (w > -1.0e8)
-            {
-                any_valid_weight = true;
-                break;
-            }
-        }
+        double any_valid = false;
+        for(double w : log_weights) if(w > -1.0e8) any_valid = true;
 
-        if (!any_valid_weight)
-        {
-            // If all particles failed, reset to uniform distribution to recover
-            for (auto &p : particles_)
-                p.weight = 1.0 / num_particles_;
-        }
-        else
-        {
-            // Log-Sum-Exp Normalization
+        if(!any_valid) {
+        for(auto &p : particles_) p.weight = 1.0 / num_particles_;
+        } else {
             double log_sum = log_sum_exp(log_weights);
-            for (int i = 0; i < num_particles_; ++i)
-            {
+            for (int i = 0; i < num_particles_; ++i) {
                 particles_[i].weight = std::exp(log_weights[i] - log_sum);
             }
         }
